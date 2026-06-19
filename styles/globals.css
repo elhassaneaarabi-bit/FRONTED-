@@ -1,0 +1,574 @@
+@import "tailwindcss";
+
+/* ═══════════════════════════════════════════════════════════════════
+   PADEL RUSH — AUTHENTIC BRAND SYSTEM
+   Black Ink · Padel Lime · Electric Green · Clean White
+   (Brand identity by Hani Alireza × Sela — Saudi Arabia)
+   ═══════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── INK (premium black foundation) ─────────────────────────── */
+  --ink: #0F1115;
+  --ink-soft: #1A1D24;
+  --ink-deep: #08090C;
+  --ink-overlay: #14171D;
+
+  /* ── BACKGROUND (clean stage for lime to pop) ───────────────── */
+  --background: #FAFAFA;
+  --background-elev: #FFFFFF;
+  --surface-warm: #F5F4EF;
+  --surface-warmer: #EDEBE3;
+  --surface-cool: #F0F2F0;
+
+  /* ── Legacy mappings ────────────────────────────────────────── */
+  --foreground: #0F1115;
+  --primary: #0F1115;
+  --primary-soft: #1A1D24;
+
+  /* ── PADEL LIME (signature brand color — padel ball energy) ── */
+  --accent: #C8F500;
+  --accent-soft: #DDFA4D;
+  --accent-deep: #98C200;
+  --accent-glow: rgba(200, 245, 0, 0.45);
+
+  /* ── CTA (same lime — text must be dark on lime) ────────────── */
+  --cta: #C8F500;
+  --cta-soft: #DDFA4D;
+  --cta-deep: #98C200;
+  --cta-ink: #0F1115;
+
+  /* ── ELECTRIC GREEN (secondary accent for variety) ──────────── */
+  --green: #00D964;
+  --green-soft: #5AF49A;
+  --green-deep: #00A04A;
+
+  /* ── Map old "gold" vars to lime for backward compat ────────── */
+  --gold: #C8F500;
+  --gold-soft: #DDFA4D;
+  --gold-deep: #98C200;
+
+  /* ── TEXT & LINES ───────────────────────────────────────────── */
+  --muted: #56606F;
+  --muted-soft: #8A8F97;
+  --border: #E5E5E0;
+  --line: #D4D4CC;
+  --border-warm: #DCDAD0;
+
+  /* ── ELEVATIONS ─────────────────────────────────────────────── */
+  --shadow-elev-1: 0 1px 2px rgba(15, 17, 21, 0.04), 0 1px 3px rgba(15, 17, 21, 0.03);
+  --shadow-elev-2: 0 4px 14px rgba(15, 17, 21, 0.06), 0 2px 6px rgba(15, 17, 21, 0.04);
+  --shadow-elev-3: 0 24px 60px -16px rgba(15, 17, 21, 0.18), 0 10px 20px -8px rgba(15, 17, 21, 0.09);
+  --shadow-luxury: 0 50px 100px -32px rgba(15, 17, 21, 0.42), 0 20px 40px -12px rgba(15, 17, 21, 0.15);
+  --shadow-cta: 0 14px 36px -10px rgba(200, 245, 0, 0.55), inset 0 1px 0 rgba(255,255,255,0.45);
+  --shadow-lime: 0 14px 36px -10px rgba(200, 245, 0, 0.55);
+  --shadow-green: 0 14px 36px -10px rgba(0, 217, 100, 0.45);
+
+  /* ── RADIUS ─────────────────────────────────────────────────── */
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 32px;
+  --radius-xl: 48px;
+
+  --container: 1280px;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-accent: var(--accent);
+  --color-cta: var(--cta);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-ink: var(--ink);
+  --color-green: var(--green);
+}
+
+html {
+  direction: rtl;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-ibm-plex-arabic), var(--font-tajawal), system-ui, sans-serif;
+  font-feature-settings: "kern", "liga", "ss01";
+  letter-spacing: -0.005em;
+}
+
+* { box-sizing: border-box; }
+::selection { background: var(--accent); color: var(--ink); }
+
+/* ═══════════════════════════════════════════════════════════════════
+   TYPOGRAPHY SCALE
+   ═══════════════════════════════════════════════════════════════════ */
+.display-1 {
+  font-family: var(--font-tajawal);
+  font-weight: 900;
+  font-size: clamp(2.5rem, 5.8vw, 5.5rem);
+  line-height: 0.98;
+  letter-spacing: -0.035em;
+}
+.display-2 {
+  font-family: var(--font-tajawal);
+  font-weight: 800;
+  font-size: clamp(2rem, 4.2vw, 3.75rem);
+  line-height: 1.04;
+  letter-spacing: -0.028em;
+}
+.heading-1 {
+  font-family: var(--font-tajawal);
+  font-weight: 800;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+.heading-2 {
+  font-family: var(--font-tajawal);
+  font-weight: 700;
+  font-size: clamp(1.375rem, 2.2vw, 1.875rem);
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+}
+.eyebrow {
+  font-family: var(--font-ibm-plex-arabic);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.eyebrow::before {
+  content: "";
+  width: 24px;
+  height: 2px;
+  background: var(--accent);
+  display: inline-block;
+}
+.lead {
+  font-size: clamp(1.0625rem, 1.4vw, 1.25rem);
+  line-height: 1.75;
+  color: var(--muted);
+  font-weight: 400;
+}
+.label-luxury {
+  font-family: var(--font-ibm-plex-arabic);
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   SURFACES — each section gets its own personality
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* 1. Clean ivory — base layer */
+.surface-ivory {
+  background:
+    radial-gradient(circle at 20% 0%, rgba(200, 245, 0, 0.05), transparent 40%),
+    linear-gradient(180deg, #FFFFFF 0%, #FAFAFA 100%);
+}
+
+/* 2. Warm sand — between dark sections */
+.surface-luxe {
+  position: relative;
+  background:
+    radial-gradient(ellipse at top right, rgba(200, 245, 0, 0.10), transparent 50%),
+    linear-gradient(180deg, #F5F4EF 0%, #ECEBE3 100%);
+}
+.surface-luxe::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 1px 1px, rgba(15,17,21,0.05) 1px, transparent 0);
+  background-size: 32px 32px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* 3. Cinematic night — premium hero / CTA */
+.surface-night {
+  background:
+    radial-gradient(ellipse at top right, rgba(200, 245, 0, 0.18), transparent 55%),
+    radial-gradient(ellipse at bottom left, rgba(0, 217, 100, 0.10), transparent 55%),
+    radial-gradient(ellipse at 50% 50%, rgba(152, 194, 0, 0.08), transparent 70%),
+    linear-gradient(180deg, #0F1115 0%, #08090C 100%);
+  color: #FAFAFA;
+}
+
+/* 4. Lime wash — energetic accent sections */
+.surface-lime {
+  background:
+    radial-gradient(ellipse at top left, rgba(255, 255, 255, 0.30), transparent 50%),
+    linear-gradient(135deg, #98C200 0%, #C8F500 50%, #DDFA4D 100%);
+  color: #0F1115;
+}
+
+/* 5. Court turf — green/dark hybrid */
+.surface-court {
+  background:
+    radial-gradient(ellipse at top, rgba(200, 245, 0, 0.12), transparent 60%),
+    radial-gradient(ellipse at bottom right, rgba(0, 217, 100, 0.10), transparent 60%),
+    linear-gradient(180deg, #14171D 0%, #1A1D24 100%);
+  color: #FAFAFA;
+}
+
+/* 6. Pure court green — for facility / academy */
+.surface-green {
+  background:
+    radial-gradient(ellipse at top right, rgba(200, 245, 0, 0.25), transparent 55%),
+    linear-gradient(135deg, #003D1A 0%, #00A04A 60%, #00D964 100%);
+  color: #FAFAFA;
+}
+
+/* dividers */
+.divider-lime {
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  height: 1px;
+}
+.divider-gold { /* kept for legacy components */
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  height: 1px;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   CARDS
+   ═══════════════════════════════════════════════════════════════════ */
+
+.card-luxury {
+  background: var(--background-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-elev-2);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+.card-luxury::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 3px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.card-luxury:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-elev-3);
+  border-color: var(--accent);
+}
+.card-luxury:hover::after { opacity: 1; }
+
+.card-night {
+  background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.015) 100%);
+  border: 1px solid rgba(255,255,255,0.10);
+  backdrop-filter: blur(12px);
+  border-radius: var(--radius-lg);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.card-night:hover {
+  border-color: rgba(200, 245, 0, 0.55);
+  background: linear-gradient(180deg, rgba(200, 245, 0, 0.06) 0%, rgba(255,255,255,0.02) 100%);
+}
+
+.card-lime {
+  background: linear-gradient(180deg, var(--ink) 0%, var(--ink-soft) 100%);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 10px 30px -10px rgba(200, 245, 0, 0.35);
+  color: #fff;
+  position: relative;
+}
+
+.card-gold { /* alias for legacy */
+  background: linear-gradient(180deg, var(--ink) 0%, var(--ink-soft) 100%);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 10px 30px -10px rgba(200, 245, 0, 0.35);
+  color: #fff;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   BUTTONS — Primary CTA uses LIME with dark text (brand signature)
+   ═══════════════════════════════════════════════════════════════════ */
+
+.btn-primary {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.625rem;
+  background: linear-gradient(180deg, var(--accent-soft) 0%, var(--accent) 60%, var(--accent-deep) 100%);
+  color: var(--ink);
+  font-weight: 800;
+  padding: 1rem 2rem;
+  border-radius: 999px;
+  letter-spacing: -0.01em;
+  font-size: 0.95rem;
+  box-shadow: var(--shadow-cta);
+  border: 1px solid rgba(15,17,21,0.10);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255,255,255,0.30), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 22px 48px -10px rgba(200, 245, 0, 0.7), inset 0 1px 0 rgba(255,255,255,0.5);
+}
+.btn-primary:hover::before { opacity: 1; }
+
+.btn-dark {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.625rem;
+  background: linear-gradient(180deg, var(--ink) 0%, var(--ink-deep) 100%);
+  color: #fff;
+  font-weight: 800;
+  padding: 1rem 2rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  letter-spacing: -0.01em;
+  box-shadow: 0 14px 36px -10px rgba(15, 17, 21, 0.45);
+  border: 1px solid rgba(255,255,255,0.10);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-dark:hover {
+  transform: translateY(-2px);
+  background: var(--ink);
+  box-shadow: 0 22px 48px -10px rgba(15, 17, 21, 0.6);
+}
+
+.btn-gold { /* alias for legacy — now points to lime */
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.625rem;
+  background: linear-gradient(180deg, var(--accent-soft) 0%, var(--accent) 60%, var(--accent-deep) 100%);
+  color: var(--ink);
+  font-weight: 800;
+  padding: 1rem 2rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  letter-spacing: -0.01em;
+  box-shadow: var(--shadow-cta);
+  border: 1px solid rgba(15,17,21,0.10);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 22px 48px -10px rgba(200, 245, 0, 0.7);
+}
+
+.btn-ghost {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.625rem;
+  background: transparent;
+  color: var(--primary);
+  font-weight: 700;
+  padding: 0.95rem 2rem;
+  border-radius: 999px;
+  border: 1.5px solid var(--primary);
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+.btn-ghost:hover {
+  background: var(--primary);
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.btn-ghost-light {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.625rem;
+  background: rgba(255,255,255,0.06);
+  color: #fff;
+  font-weight: 700;
+  padding: 0.95rem 2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.20);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+.btn-ghost-light:hover {
+  background: rgba(200, 245, 0, 0.10);
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   PILLS
+   ═══════════════════════════════════════════════════════════════════ */
+
+.pill-gold { /* now = lime */
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.45rem 1rem; border-radius: 999px;
+  background: linear-gradient(135deg, rgba(200,245,0,0.18) 0%, rgba(200,245,0,0.06) 100%);
+  border: 1px solid rgba(200,245,0,0.45);
+  color: var(--accent);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.pill-lime {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.45rem 1rem; border-radius: 999px;
+  background: var(--accent);
+  border: 1px solid var(--accent-deep);
+  color: var(--ink);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.pill-crimson { /* now repurposed as a green pill */
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.45rem 1rem; border-radius: 999px;
+  background: linear-gradient(135deg, rgba(0,217,100,0.15) 0%, rgba(0,217,100,0.05) 100%);
+  border: 1px solid rgba(0,217,100,0.40);
+  color: var(--green-soft);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.pill-light {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.45rem 1rem; border-radius: 999px;
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.20);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+}
+
+.pill-dark {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.45rem 1rem; border-radius: 999px;
+  background: var(--ink);
+  color: var(--accent);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.gold-line {
+  width: 56px;
+  height: 3px;
+  background: var(--accent);
+  display: inline-block;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   NUMBERS
+   ═══════════════════════════════════════════════════════════════════ */
+
+.number-luxury {
+  font-family: var(--font-tajawal);
+  font-weight: 900;
+  font-variant-numeric: tabular-nums;
+  font-size: clamp(2.5rem, 4.5vw, 3.75rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  background: linear-gradient(135deg, #fff 0%, var(--accent-soft) 50%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.number-crimson { /* now = bold lime */
+  font-family: var(--font-tajawal);
+  font-weight: 900;
+  font-variant-numeric: tabular-nums;
+  font-size: clamp(2.5rem, 4.5vw, 3.75rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-deep) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* grain texture */
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='1'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/></svg>");
+  opacity: 0.04;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   ANIMATIONS
+   ═══════════════════════════════════════════════════════════════════ */
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up { animation: fadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) both; }
+
+@keyframes slowFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+.animate-float { animation: slowFloat 6s ease-in-out infinite; }
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.shimmer-gold {
+  background: linear-gradient(90deg, var(--accent) 0%, #fff 50%, var(--accent) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 4s linear infinite;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   CONTAINER
+   ═══════════════════════════════════════════════════════════════════ */
+
+.container-luxury {
+  width: 100%;
+  max-width: var(--container);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+@media (min-width: 768px) {
+  .container-luxury { padding-left: 2.5rem; padding-right: 2.5rem; }
+}
+@media (min-width: 1280px) {
+  .container-luxury { padding-left: 3rem; padding-right: 3rem; }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   UTILITY
+   ═══════════════════════════════════════════════════════════════════ */
+
+.text-balance { text-wrap: balance; }
+.text-pretty { text-wrap: pretty; }
+
+.ring-gold { box-shadow: 0 0 0 1px var(--accent), 0 8px 24px -8px rgba(200, 245, 0, 0.45); }
+.ring-crimson { box-shadow: 0 0 0 1px var(--green), 0 8px 24px -8px rgba(0, 217, 100, 0.35); }
