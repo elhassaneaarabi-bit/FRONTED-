@@ -8,7 +8,7 @@ export const generateMetadata = () => metadata("البطولات", "بطولات
 
 export default function TournamentsPage() {
   const upcoming = siteConfig.tournaments.filter(t => t.status === "upcoming");
-  const completed = siteConfig.tournaments.filter(t => t.status === "completed");
+  const completed = siteConfig.tournaments.filter(t => (t.status as string) === "completed");
 
   return (
     <main className="bg-[var(--background)]">

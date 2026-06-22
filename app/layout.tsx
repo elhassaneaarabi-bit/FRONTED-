@@ -4,6 +4,7 @@ import { siteConfig } from "@/lib/site-config";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { WhatsAppFAB } from "@/components/layout/whatsapp-fab";
+import { Pixels } from "@/components/analytics/pixels";
 import "@/styles/globals.css";
 
 const tajawal = Tajawal({
@@ -33,6 +34,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         {children}
         <SiteFooter />
         <WhatsAppFAB />
+        <Pixels />
       </body>
     </html>
   );
