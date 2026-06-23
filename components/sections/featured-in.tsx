@@ -3,7 +3,7 @@ const logos = ["WHOOP", "PLAYTOMIC", "BLVD RIYADH", "SAUDI PADEL FED.", "FIP", "
 export function FeaturedIn({ variant = "light" }: { variant?: "light" | "dark" }) {
   const isDark = variant === "dark";
   return (
-    <section className={`py-14 border-y ${isDark ? "border-white/8 bg-[var(--ink-deep)]" : "border-[var(--border)] bg-[var(--background-elev)]"} overflow-hidden relative`}>
+    <section className={`py-8 sm:py-14 border-y ${isDark ? "border-white/8 bg-[var(--ink-deep)]" : "border-[var(--border)] bg-[var(--background-elev)]"} overflow-hidden relative`}>
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[var(--gold)]/30 to-transparent"></div>
       <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[var(--gold)]/30 to-transparent"></div>
       <div className="container-luxury">

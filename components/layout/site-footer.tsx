@@ -10,7 +10,7 @@ export function SiteFooter() {
       <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-[var(--accent)]/8 blur-[120px]"></div>
       <div className="absolute -bottom-32 -left-32 w-96 h-96 rounded-full bg-[var(--gold)]/5 blur-[120px]"></div>
 
-      <div className="container-luxury py-20 relative">
+      <div className="container-luxury py-12 sm:py-20 relative">
         <div className="grid lg:grid-cols-12 gap-12">
           <div className="lg:col-span-4">
             <div className="flex items-center gap-3 mb-6">
@@ -73,9 +73,9 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-white/8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <p className="text-white/40 text-xs">© {new Date().getFullYear()} <span className="text-[var(--gold-soft)]/70">PADEL RUSH</span> @ BLVD RUH CITY · {siteConfig.email} · جميع الحقوق محفوظة.</p>
-          <div className="flex gap-6 text-xs text-white/40">
+        <div className="mt-10 sm:mt-16 pt-6 sm:pt-8 border-t border-white/8 flex flex-col items-start sm:items-center justify-between gap-3 sm:gap-4">
+          <p className="text-white/40 text-[10px] sm:text-xs leading-relaxed">© {new Date().getFullYear()} <span className="text-[var(--gold-soft)]/70">PADEL RUSH</span> @ BLVD RUH CITY<br className="sm:hidden" /> {siteConfig.email} · جميع الحقوق محفوظة.</p>
+          <div className="flex flex-wrap gap-4 sm:gap-6 text-[10px] sm:text-xs text-white/40">
             <Link href="/privacy" className="hover:text-[var(--gold-soft)] transition-colors">سياسة الخصوصية</Link>
             <Link href="/terms" className="hover:text-[var(--gold-soft)] transition-colors">الشروط والأحكام</Link>
             <Link href="/faq" className="hover:text-[var(--gold-soft)] transition-colors">الأسئلة الشائعة</Link>

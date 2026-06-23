@@ -19,7 +19,7 @@ export function StickyBookingBar() {
         visible ? "translate-y-0" : "translate-y-full"
       }`}
     >
-      <div className="bg-[var(--ink)]/95 backdrop-blur-lg border-t border-[var(--accent)]/30 px-4 py-3 flex items-center justify-between gap-3">
+      <div className="bg-[var(--ink)]/95 backdrop-blur-lg border-t border-[var(--accent)]/30 px-4 pt-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))] flex items-center justify-between gap-3">
         <div className="flex-1 min-w-0">
           <div className="text-white text-xs font-bold truncate">PADEL RUSH</div>
           <div className="text-[var(--accent)] text-[10px]">من 210 ر.س / 90 دقيقة</div>

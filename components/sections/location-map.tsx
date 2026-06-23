@@ -4,7 +4,7 @@ import { whatsappUrl } from "@/lib/whatsapp";
 
 export function LocationMap() {
   return (
-    <section className="py-24 md:py-32 surface-luxe">
+    <section className="py-16 md:py-24 lg:py-32 surface-luxe">
       <div className="container-luxury">
         <div className="text-center max-w-2xl mx-auto mb-14">
           <span className="eyebrow">قلب الرياض</span>
@@ -13,7 +13,7 @@ export function LocationMap() {
         </div>
 
         <div className="grid lg:grid-cols-12 gap-6">
-          <div className="lg:col-span-7 relative h-[460px] lg:h-[560px] rounded-[var(--radius-lg)] overflow-hidden shadow-[var(--shadow-luxury)] ring-1 ring-[var(--border)]">
+          <div className="lg:col-span-7 relative h-[280px] sm:h-[380px] lg:h-[560px] rounded-[var(--radius-lg)] overflow-hidden shadow-[var(--shadow-luxury)] ring-1 ring-[var(--border)]">
             <iframe
               src="https://www.google.com/maps?q=Padel+Rush+Boulevard+Riyadh+City+Hittin&t=&z=16&ie=UTF8&iwloc=&output=embed"
               className="w-full h-full border-0"
@@ -28,10 +28,10 @@ export function LocationMap() {
           </div>
 
           <div className="lg:col-span-5 flex flex-col gap-4">
-            <div className="bg-[var(--background-elev)] border border-[var(--border)] rounded-[var(--radius-lg)] p-7 shadow-[var(--shadow-elev-2)]">
+            <div className="bg-[var(--background-elev)] border border-[var(--border)] rounded-[var(--radius-lg)] p-5 sm:p-7 shadow-[var(--shadow-elev-2)]">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-2xl bg-[var(--accent)]/10 border border-[var(--accent)]/30 flex items-center justify-center shrink-0">
-                  <MapPin className="w-5 h-5 text-[var(--accent)]" />
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-[var(--accent)]/10 border border-[var(--accent)]/30 flex items-center justify-center shrink-0">
+                  <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-[var(--accent)]" />
                 </div>
                 <div>
                   <h4 className="font-bold text-[var(--primary)] mb-2">العنوان</h4>
@@ -41,10 +41,10 @@ export function LocationMap() {
               </div>
             </div>
 
-            <div className="bg-[var(--background-elev)] border border-[var(--border)] rounded-[var(--radius-lg)] p-7 shadow-[var(--shadow-elev-2)]">
+            <div className="bg-[var(--background-elev)] border border-[var(--border)] rounded-[var(--radius-lg)] p-5 sm:p-7 shadow-[var(--shadow-elev-2)]">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-2xl bg-[var(--accent)]/10 border border-[var(--accent)]/30 flex items-center justify-center shrink-0">
-                  <Clock className="w-5 h-5 text-[var(--accent)]" />
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-[var(--accent)]/10 border border-[var(--accent)]/30 flex items-center justify-center shrink-0">
+                  <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-[var(--accent)]" />
                 </div>
                 <div>
                   <h4 className="font-bold text-[var(--primary)] mb-2">ساعات العمل</h4>
@@ -54,7 +54,7 @@ export function LocationMap() {
               </div>
             </div>
 
-            <div className="bg-[var(--primary)] text-white rounded-[var(--radius-lg)] p-7 relative overflow-hidden">
+            <div className="bg-[var(--primary)] text-white rounded-[var(--radius-lg)] p-5 sm:p-7 relative overflow-hidden">
               <div className="absolute -top-8 -right-8 w-32 h-32 rounded-full bg-[var(--accent)]/15 blur-2xl"></div>
               <div className="relative z-10">
                 <h4 className="font-bold mb-4 text-lg">تواصل مباشر</h4>

@@ -24,19 +24,19 @@ export default function TournamentsPage() {
         </div>
       </section>
 
-      <section className="container-luxury py-20">
-        <div className="flex items-center gap-3 mb-12">
-          <Trophy className="w-8 h-8 text-[var(--cta)]" />
-          <h2 className="text-3xl font-bold text-[var(--primary)]">البطولات القادمة</h2>
+      <section className="container-luxury py-12 sm:py-20">
+        <div className="flex items-center gap-3 mb-8 sm:mb-12">
+          <Trophy className="w-6 h-6 sm:w-8 sm:h-8 text-[var(--cta)]" />
+          <h2 className="text-2xl sm:text-3xl font-bold text-[var(--primary)]">البطولات القادمة</h2>
         </div>
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
           {upcoming.map((t) => (
             <article key={t.slug} className="bg-[var(--background-elev)] border border-[var(--border)] rounded-[var(--radius-lg)] overflow-hidden shadow-[var(--shadow-elev-2)] flex flex-col sm:flex-row">
-              <div className="relative w-full sm:w-2/5 h-64 sm:h-auto">
+              <div className="relative w-full sm:w-2/5 h-48 sm:h-auto">
                 <Image src={t.image} alt={t.title} fill className="object-cover" />
                 <div className="absolute top-4 right-4 bg-[var(--cta)] text-white px-3 py-1 rounded-full text-xs font-bold animate-pulse">التسجيل مفتوح</div>
               </div>
-              <div className="p-8 w-full sm:w-3/5 flex flex-col">
+              <div className="p-5 sm:p-8 w-full sm:w-3/5 flex flex-col">
                 <h3 className="text-2xl font-bold text-[var(--primary)] mb-4">{t.title}</h3>
                 <div className="space-y-3 mb-8 flex-grow">
                   <div className="flex items-center gap-3 text-[var(--muted)]"><Calendar className="w-5 h-5 text-[var(--accent)]" /><span>{t.date}</span></div>

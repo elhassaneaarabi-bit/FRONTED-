@@ -30,7 +30,7 @@ export default function HomePage() {
         <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-[var(--accent)]/15 blur-[140px]"></div>
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full bg-[var(--gold)]/8 blur-[140px]"></div>
 
-        <div className="container-luxury relative z-10 pt-36 pb-16 md:pt-40 md:pb-24 text-white">
+        <div className="container-luxury relative z-10 pt-28 pb-14 sm:pt-36 sm:pb-16 md:pt-40 md:pb-24 text-white">
           <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
             <div className="lg:col-span-6">
               <div className="pill-gold mb-8 animate-fade-up">
@@ -407,15 +407,15 @@ export default function HomePage() {
                 <Image src={court.image} alt={court.name} fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[var(--primary)] via-[var(--primary)]/30 to-transparent" />
                 <div className="absolute top-6 right-6"><span className="pill-light">{court.type}</span></div>
-                <div className="absolute bottom-0 right-0 left-0 p-8 text-white">
-                  <h3 className="text-3xl font-bold mb-2 tracking-tight">{court.name}</h3>
-                  <p className="text-white/70 text-sm mb-5 line-clamp-2">{court.description}</p>
-                  <div className="flex items-end justify-between">
+                <div className="absolute bottom-0 right-0 left-0 p-4 sm:p-8 text-white">
+                  <h3 className="text-xl sm:text-3xl font-bold mb-1 sm:mb-2 tracking-tight">{court.name}</h3>
+                  <p className="text-white/70 text-xs sm:text-sm mb-3 sm:mb-5 line-clamp-2">{court.description}</p>
+                    <div className="flex items-end justify-between gap-2">
                     <div>
-                      <div className="text-[10px] uppercase tracking-[0.2em] text-white/50">يبدأ من</div>
-                      <div className="text-2xl font-bold text-[var(--accent)]">{court.price} <span className="text-sm font-normal text-white/70">ر.س / 90 د</span></div>
+                      <div className="text-[9px] sm:text-[10px] uppercase tracking-[0.2em] text-white/50">يبدأ من</div>
+                      <div className="text-lg sm:text-2xl font-bold text-[var(--accent)]">{court.price} <span className="text-xs sm:text-sm font-normal text-white/70">ر.س</span></div>
                     </div>
-                    <span className="inline-flex items-center gap-2 text-white/90 group-hover:text-[var(--accent)] font-bold text-sm transition-colors">
+                    <span className="hidden sm:inline-flex items-center gap-2 text-white/90 group-hover:text-[var(--accent)] font-bold text-sm transition-colors">
                       التفاصيل<MoveLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
                     </span>
                   </div>

@@ -9,7 +9,7 @@ const posts = images.instagram.map((src, i) => ({ src, caption: captions[i] }));
 export function InstagramFeed({ variant = "light" }: { variant?: "light" | "dark" }) {
   const isDark = variant === "dark";
   return (
-    <section className={`py-24 md:py-32 relative overflow-hidden ${isDark ? "surface-night text-white" : ""}`}>
+    <section className={`py-16 md:py-24 lg:py-32 relative overflow-hidden ${isDark ? "surface-night text-white" : ""}`}>
       <div className="container-luxury">
         <div className="grid lg:grid-cols-12 gap-10 mb-14 items-end">
           <div className="lg:col-span-7">
@@ -18,10 +18,9 @@ export function InstagramFeed({ variant = "light" }: { variant?: "light" | "dark
             <p className={`lead ${isDark ? "text-white/65" : ""}`}>من بطولات Monday Night إلى Women's Day وSundowns على ملاعب BLVD — تابع كل لحظة على إنستجرام.</p>
           </div>
           <div className="lg:col-span-5 flex lg:justify-end">
-            <a href={siteConfig.instagram} target="_blank" rel="noopener" className="inline-flex items-center gap-3 bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] text-white px-6 py-3.5 rounded-full font-bold text-sm shadow-xl shadow-rose-900/30 hover:scale-105 transition-transform">
-              <Instagram className="w-5 h-5" />
-              <span>تابعنا على Instagram</span>
-              <span className="bg-white/20 px-2 py-0.5 rounded-full text-xs">@padelrush</span>
+            <a href={siteConfig.instagram} target="_blank" rel="noopener" className="inline-flex items-center gap-2 sm:gap-3 bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] text-white px-4 sm:px-6 py-3 sm:py-3.5 rounded-full font-bold text-xs sm:text-sm shadow-xl shadow-rose-900/30 hover:scale-105 transition-transform">
+              <Instagram className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
+              <span>تابع @padelrush</span>
             </a>
           </div>
         </div>
