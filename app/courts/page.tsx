@@ -24,15 +24,15 @@ export default function CourtsPage() {
 
       <TrustBar variant="light" />
 
-      <section className="py-24 md:py-32">
+      <section className="py-16 md:py-24 lg:py-32">
         <div className="container-luxury">
-          <div className="grid gap-10">
+          <div className="grid gap-8 md:gap-10">
             {siteConfig.courts.map((court, idx) => {
               const isEven = idx % 2 === 1;
               return (
                 <article key={court.slug} className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-center group">
                   <div className={`lg:col-span-7 ${isEven ? "lg:order-2" : "lg:order-1"}`}>
-                    <Link href={`/courts/${court.slug}`} className="block relative h-[500px] rounded-[var(--radius-lg)] overflow-hidden">
+                    <Link href={`/courts/${court.slug}`} className="block relative h-[250px] sm:h-[350px] lg:h-[500px] rounded-[var(--radius-lg)] overflow-hidden">
                       <Image src={court.image} alt={court.name} fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
                       <div className="absolute inset-0 bg-gradient-to-t from-[var(--primary)]/30 to-transparent" />
                       <div className="absolute top-6 right-6"><span className="pill-light">{court.type}</span></div>
@@ -40,7 +40,7 @@ export default function CourtsPage() {
                   </div>
                   <div className={`lg:col-span-5 ${isEven ? "lg:order-1" : "lg:order-2"}`}>
                     <span className="eyebrow">ملعب 0{idx + 1}</span>
-                    <h2 className="text-4xl md:text-5xl font-black text-[var(--primary)] tracking-tight mt-3 mb-5">{court.name}</h2>
+                    <h2 className="text-2xl sm:text-4xl md:text-5xl font-black text-[var(--primary)] tracking-tight mt-3 mb-5">{court.name}</h2>
                     <p className="text-[var(--muted)] text-lg leading-relaxed mb-8">{court.description}</p>
                     <div className="grid grid-cols-2 gap-4 mb-8">
                       <div>

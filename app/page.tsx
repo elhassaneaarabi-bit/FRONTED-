@@ -52,10 +52,10 @@ export default function HomePage() {
                 </a>
               </div>
 
-              <div className="mt-14 pt-10 border-t border-white/10 grid grid-cols-3 gap-6">
-                <div><div className="number-luxury">11</div><p className="text-[11px] text-white/55 mt-2 leading-relaxed tracking-wider uppercase">ملعب داخلي وخارجي</p></div>
-                <div><div className="number-luxury">18h</div><p className="text-[11px] text-white/55 mt-2 leading-relaxed tracking-wider uppercase">8:30 ص — 2:30 ص</p></div>
-                <div><div className="number-luxury">5★</div><p className="text-[11px] text-white/55 mt-2 leading-relaxed tracking-wider uppercase">على Playtomic</p></div>
+              <div className="mt-10 sm:mt-14 pt-8 sm:pt-10 border-t border-white/10 grid grid-cols-3 gap-3 sm:gap-6">
+                <div><div className="text-2xl sm:text-4xl font-black number-luxury">11</div><p className="text-[10px] sm:text-[11px] text-white/55 mt-1 sm:mt-2 leading-relaxed tracking-wider uppercase">ملعب داخلي وخارجي</p></div>
+                <div><div className="text-2xl sm:text-4xl font-black number-luxury">18h</div><p className="text-[10px] sm:text-[11px] text-white/55 mt-1 sm:mt-2 leading-relaxed tracking-wider uppercase">8:30 ص — 2:30 ص</p></div>
+                <div><div className="text-2xl sm:text-4xl font-black number-luxury">5★</div><p className="text-[10px] sm:text-[11px] text-white/55 mt-1 sm:mt-2 leading-relaxed tracking-wider uppercase">على Playtomic</p></div>
               </div>
             </div>
 
@@ -170,7 +170,7 @@ export default function HomePage() {
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[var(--accent)]/60 to-transparent z-10"></div>
         <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[var(--accent)]/40 to-transparent z-10"></div>
 
-        <div className="container-luxury relative z-10 py-28 md:py-40 lg:py-52 text-white">
+        <div className="container-luxury relative z-10 py-16 sm:py-28 md:py-40 lg:py-52 text-white">
           <div className="grid lg:grid-cols-12 gap-10 items-center">
             {/* Empty right column (in RTL, this is visually on the right) — let the action breathe */}
             <div className="hidden lg:block lg:col-span-5"></div>
@@ -198,19 +198,19 @@ export default function HomePage() {
               </p>
 
               {/* Stats Row */}
-              <div className="flex flex-wrap items-stretch gap-x-10 gap-y-6 mb-14 animate-fade-up">
+              <div className="flex flex-wrap items-stretch gap-x-6 sm:gap-x-10 gap-y-6 mb-10 sm:mb-14 animate-fade-up">
                 <div>
-                  <div className="text-4xl md:text-5xl font-black tracking-tight text-[var(--accent)] mb-1">+12K</div>
+                  <div className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-[var(--accent)] mb-1">+12K</div>
                   <p className="text-[11px] uppercase tracking-[0.18em] text-white/55">مباراة سنوياً</p>
                 </div>
                 <div className="w-px bg-white/15"></div>
                 <div>
-                  <div className="text-4xl md:text-5xl font-black tracking-tight text-[var(--accent)] mb-1">+850</div>
+                  <div className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-[var(--accent)] mb-1">+850</div>
                   <p className="text-[11px] uppercase tracking-[0.18em] text-white/55">عضو نشط</p>
                 </div>
                 <div className="w-px bg-white/15"></div>
                 <div>
-                  <div className="text-4xl md:text-5xl font-black tracking-tight text-[var(--accent)] mb-1">4.9★</div>
+                  <div className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-[var(--accent)] mb-1">4.9★</div>
                   <p className="text-[11px] uppercase tracking-[0.18em] text-white/55">Playtomic</p>
                 </div>
               </div>
@@ -262,12 +262,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-24 md:py-32">
+      <section className="py-16 md:py-24 lg:py-32">
         <div className="container-luxury">
-          <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+          <div className="grid lg:grid-cols-12 gap-10 lg:gap-20 items-center">
             <div className="lg:col-span-6 relative">
-              <div className="relative h-[600px] rounded-[var(--radius-lg)] overflow-hidden">
-                <Image src={siteConfig.aboutImage} alt="Club facilities" fill className="object-cover" />
+              <div className="relative h-[300px] sm:h-[400px] lg:h-[600px] rounded-[var(--radius-lg)] overflow-hidden">
+                <Image src={siteConfig.aboutImage} alt="Club facilities" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
               </div>
               <div className="absolute -bottom-8 -right-8 hidden md:block bg-[var(--background-elev)] border border-[var(--border)] rounded-[var(--radius-md)] p-6 shadow-[var(--shadow-luxury)] max-w-[280px]">
                 <div className="flex items-center gap-3 mb-3">
@@ -304,7 +304,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="surface-court text-white py-24 md:py-32 relative overflow-hidden">
+      <section className="surface-court text-white py-16 md:py-24 lg:py-32 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-px divider-gold opacity-40"></div>
         <div className="absolute -top-20 -right-20 w-96 h-96 rounded-full bg-[var(--accent)]/10 blur-[120px]"></div>
         <div className="container-luxury relative">
@@ -321,13 +321,13 @@ export default function HomePage() {
               { num: "02", icon: Award, title: "مدربون دوليون", desc: "طاقم تدريب معتمد من FIP والاتحاد الإسباني، مع لاعبين سابقين على دائرة WPT.", accent: "gold" },
               { num: "03", icon: Target, title: "تجربة موثوقة", desc: "حجز فوري، تأكيد لحظي، مرافق فندقية، وفريق خدمة على مدار اليوم.", accent: "crimson" }
             ].map((pillar) => (
-              <div key={pillar.num} className="relative card-night p-10 md:p-12 group">
+              <div key={pillar.num} className="relative card-night p-6 sm:p-10 md:p-12 group">
                 <div className={`absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent ${pillar.accent === "gold" ? "via-[var(--gold)]" : "via-[var(--accent)]"} to-transparent opacity-50`}></div>
                 <div className="flex items-start justify-between mb-12">
                   <div className={`w-14 h-14 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform ${pillar.accent === "gold" ? "bg-[var(--gold)]/15 border border-[var(--gold)]/35" : "bg-[var(--accent)]/15 border border-[var(--accent)]/35"}`}>
                     <pillar.icon className={`w-6 h-6 ${pillar.accent === "gold" ? "text-[var(--gold-soft)]" : "text-[var(--accent-soft)]"}`} />
                   </div>
-                  <span className={`text-6xl font-black tracking-tight ${pillar.accent === "gold" ? "text-[var(--gold)]/12" : "text-[var(--accent)]/12"}`}>{pillar.num}</span>
+                  <span className={`text-4xl sm:text-6xl font-black tracking-tight ${pillar.accent === "gold" ? "text-[var(--gold)]/12" : "text-[var(--accent)]/12"}`}>{pillar.num}</span>
                 </div>
                 <h3 className="text-2xl font-bold mb-4 tracking-tight">{pillar.title}</h3>
                 <p className="text-white/65 leading-relaxed text-[15px]">{pillar.desc}</p>
@@ -337,13 +337,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-24 md:py-32 surface-luxe relative">
+      <section className="py-16 md:py-24 lg:py-32 surface-luxe relative">
         <div className="container-luxury relative">
-          <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+          <div className="grid lg:grid-cols-12 gap-10 lg:gap-20 items-center">
             <div className="lg:col-span-6 lg:order-2 relative">
               <div className="absolute -top-6 -right-6 w-24 h-24 rounded-full bg-[var(--accent)]/20 blur-2xl"></div>
               <div className="absolute -bottom-6 -left-6 w-24 h-24 rounded-full bg-[var(--gold)]/30 blur-2xl"></div>
-              <div className="relative h-[600px] rounded-[var(--radius-lg)] overflow-hidden ring-1 ring-[var(--ink)]/10 shadow-[var(--shadow-luxury)]">
+              <div className="relative h-[300px] sm:h-[400px] lg:h-[600px] rounded-[var(--radius-lg)] overflow-hidden ring-1 ring-[var(--ink)]/10 shadow-[var(--shadow-luxury)]">
                 <Image src={siteConfig.coaches[0].image} alt="Coach training" fill className="object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[var(--ink)]/85 via-[var(--ink)]/30 to-transparent" />
                 <div className="absolute top-6 right-6"><span className="pill-gold">FIP Certified</span></div>
@@ -375,9 +375,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-24 md:py-32">
+      <section className="py-16 md:py-24 lg:py-32">
         <div className="container-luxury">
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10 md:mb-16">
             <div>
               <span className="eyebrow">الملاعب</span>
               <h2 className="display-2 mt-4 text-[var(--primary)]">اختر ملعبك.</h2>
@@ -386,7 +386,7 @@ export default function HomePage() {
           </div>
           <div className="grid md:grid-cols-12 gap-6">
             {siteConfig.courts.map((court, idx) => (
-              <Link key={court.slug} href={`/courts/${court.slug}`} className={`group relative rounded-[var(--radius-lg)] overflow-hidden ${idx === 0 ? "md:col-span-7 h-[460px]" : "md:col-span-5 h-[460px]"}`}>
+              <Link key={court.slug} href={`/courts/${court.slug}`} className={`group relative rounded-[var(--radius-lg)] overflow-hidden ${idx === 0 ? "md:col-span-7 h-[280px] sm:h-[360px] md:h-[460px]" : "md:col-span-5 h-[280px] sm:h-[360px] md:h-[460px]"}`}>
                 <Image src={court.image} alt={court.name} fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[var(--primary)] via-[var(--primary)]/30 to-transparent" />
                 <div className="absolute top-6 right-6"><span className="pill-light">{court.type}</span></div>
@@ -415,7 +415,7 @@ export default function HomePage() {
 
       <LocationMap />
 
-      <section className="py-24 md:py-32 surface-lime text-[var(--ink)] relative overflow-hidden">
+      <section className="py-16 md:py-24 lg:py-32 surface-lime text-[var(--ink)] relative overflow-hidden">
         <div className="absolute inset-0 opacity-12 mix-blend-overlay">
           <Image src={siteConfig.heroImage} alt="" fill className="object-cover" />
         </div>
@@ -459,7 +459,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-24 md:py-32 surface-luxe relative overflow-hidden">
+      <section className="py-16 md:py-24 lg:py-32 surface-luxe relative overflow-hidden">
         <div className="container-luxury text-center max-w-3xl relative">
           <div className="inline-flex items-center gap-3 mb-8">
             <span className="gold-line"></span>

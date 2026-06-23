@@ -42,7 +42,7 @@ export default function MembershipsPage() {
         <div className="container-luxury">
           <div className="grid md:grid-cols-3 gap-6 items-start">
             {siteConfig.memberships.map((tier, idx) => (
-              <div key={tier.name} className={`relative rounded-[var(--radius-lg)] p-10 transition-all duration-500 hover:-translate-y-2 ${tier.popular ? "bg-gradient-to-br from-[var(--ink)] via-[var(--ink-soft)] to-[var(--ink)] text-white shadow-[var(--shadow-luxury)] md:-translate-y-6 ring-2 ring-[var(--accent)]" : "bg-[var(--background-elev)] border border-[var(--border)] shadow-[var(--shadow-elev-2)] hover:border-[var(--accent)]"}`}>
+              <div key={tier.name} className={`relative rounded-[var(--radius-lg)] p-6 sm:p-10 transition-all duration-500 hover:-translate-y-2 ${tier.popular ? "bg-gradient-to-br from-[var(--ink)] via-[var(--ink-soft)] to-[var(--ink)] text-white shadow-[var(--shadow-luxury)] md:-translate-y-6 ring-2 ring-[var(--accent)]" : "bg-[var(--background-elev)] border border-[var(--border)] shadow-[var(--shadow-elev-2)] hover:border-[var(--accent)]"}`}>
                 {tier.popular && (
                   <>
                     <div className="absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-[var(--accent)] to-transparent"></div>
@@ -58,7 +58,7 @@ export default function MembershipsPage() {
                   <h3 className={`text-3xl font-black mt-3 mb-1 tracking-tight ${tier.popular ? "" : "text-[var(--ink)]"}`}>{tier.name}</h3>
                   <p className={`text-sm mb-8 ${tier.popular ? "text-white/55" : "text-[var(--muted)]"}`}>{tier.period}</p>
                   <div className="flex items-baseline gap-2 mb-10 pb-10 border-b border-current/10">
-                    <span className={`text-5xl font-black tracking-tight ${tier.popular ? "text-[var(--accent)]" : "text-[var(--ink)]"}`}>{tier.price}</span>
+                    <span className={`text-3xl sm:text-5xl font-black tracking-tight ${tier.popular ? "text-[var(--accent)]" : "text-[var(--ink)]"}`}>{tier.price}</span>
                   </div>
                   <ul className="space-y-4 mb-10">
                     {tier.benefits.map((b) => (
@@ -104,8 +104,8 @@ export default function MembershipsPage() {
               </div>
             </div>
             <div className="lg:col-span-6 relative">
-              <div className="relative h-[600px] rounded-[var(--radius-lg)] overflow-hidden">
-                <Image src={siteConfig.heroImage} alt="" fill className="object-cover" />
+              <div className="relative h-[300px] sm:h-[400px] lg:h-[600px] rounded-[var(--radius-lg)] overflow-hidden">
+                <Image src={siteConfig.heroImage} alt="" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
               </div>
             </div>
           </div>
@@ -118,14 +118,14 @@ export default function MembershipsPage() {
             <span className="eyebrow">مقارنة شفافة</span>
             <h2 className="display-2 text-[var(--primary)] mt-4 mb-6">اختر باقتك <span className="text-[var(--cta)]">بكل وضوح.</span></h2>
           </div>
-          <div className="bg-[var(--background-elev)] rounded-[var(--radius-lg)] overflow-hidden shadow-[var(--shadow-elev-2)] border border-[var(--border)]">
-            <table className="w-full">
+          <div className="bg-[var(--background-elev)] rounded-[var(--radius-lg)] overflow-hidden shadow-[var(--shadow-elev-2)] border border-[var(--border)] overflow-x-auto">
+            <table className="w-full min-w-[600px]">
               <thead>
                 <tr className="bg-[var(--primary)] text-white">
-                  <th className="p-6 text-right text-sm font-bold tracking-wider uppercase">المميزات</th>
-                  <th className="p-6 text-center text-sm font-bold tracking-wider uppercase">شهرية</th>
-                  <th className="p-6 text-center text-sm font-bold tracking-wider uppercase bg-[var(--accent)] text-[var(--primary)]">ربع سنوية ★</th>
-                  <th className="p-6 text-center text-sm font-bold tracking-wider uppercase">سنوية</th>
+                  <th className="p-3 sm:p-6 text-right text-xs sm:text-sm font-bold tracking-wider uppercase">المميزات</th>
+                  <th className="p-3 sm:p-6 text-center text-xs sm:text-sm font-bold tracking-wider uppercase">شهرية</th>
+                  <th className="p-3 sm:p-6 text-center text-xs sm:text-sm font-bold tracking-wider uppercase bg-[var(--accent)] text-[var(--primary)]">ربع سنوية ★</th>
+                  <th className="p-3 sm:p-6 text-center text-xs sm:text-sm font-bold tracking-wider uppercase">سنوية</th>
                 </tr>
               </thead>
               <tbody>
@@ -147,7 +147,7 @@ export default function MembershipsPage() {
 
       <section className="py-24 md:py-32">
         <div className="container-luxury max-w-4xl">
-          <div className="bg-[var(--primary)] text-white rounded-[var(--radius-xl)] p-12 md:p-16 relative overflow-hidden">
+          <div className="bg-[var(--primary)] text-white rounded-[var(--radius-xl)] p-8 sm:p-12 md:p-16 relative overflow-hidden">
             <div className="absolute -top-12 -right-12 w-48 h-48 rounded-full bg-[var(--accent)]/15 blur-3xl"></div>
             <div className="relative z-10 text-center">
               <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-[var(--accent)] mb-6">

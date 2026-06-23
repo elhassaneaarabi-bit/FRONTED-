@@ -10,15 +10,15 @@ const playerImages = images.players;
 export function Testimonials({ variant = "light" }: { variant?: Variant }) {
   const isDark = variant === "dark";
   return (
-    <section className={`py-24 md:py-32 relative overflow-hidden ${isDark ? "surface-night text-white" : "surface-luxe"}`}>
+    <section className={`py-16 md:py-24 lg:py-32 relative overflow-hidden ${isDark ? "surface-night text-white" : "surface-luxe"}`}>
       <div className="container-luxury">
-        <div className="grid lg:grid-cols-12 gap-12 mb-16">
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 mb-10 md:mb-16">
           <div className="lg:col-span-5">
             <span className="eyebrow">شهادات اللاعبين</span>
             <h2 className="display-2 mt-4 mb-6">مجتمع <br /><span className="text-[var(--accent)]">يثق بالتفاصيل</span></h2>
             <p className={`lead ${isDark ? "text-white/65" : ""}`}>لم نبنِ ملاعب فقط، بل بنينا تجربة كاملة يحدّث عنها لاعبونا كل يوم.</p>
           </div>
-          <div className="lg:col-span-7 grid grid-cols-3 gap-6 self-end">
+          <div className="lg:col-span-7 grid grid-cols-3 gap-3 sm:gap-6 self-end">
             <div className="text-center">
               <div className="number-luxury">4.9</div>
               <div className="flex gap-0.5 justify-center my-2 text-[var(--accent)]">

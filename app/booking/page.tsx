@@ -39,7 +39,7 @@ export default function BookingPage() {
           ))}
         </div>
 
-        <div className="mt-16 bg-[var(--primary)] text-white rounded-[var(--radius-lg)] p-12 text-center">
+        <div className="mt-12 md:mt-16 bg-[var(--primary)] text-white rounded-[var(--radius-lg)] p-6 sm:p-12 text-center">
           <h3 className="text-2xl font-bold mb-4">تحتاج مساعدة في الاختيار؟</h3>
           <p className="text-white/70 mb-8">فريقنا جاهز للرد على استفساراتك خلال دقائق.</p>
           <a href={whatsappUrl("أحتاج مساعدة في اختيار ملعب")} className="btn-primary">

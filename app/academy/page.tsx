@@ -22,10 +22,10 @@ export default function AcademyPage() {
             <h1 className="display-1">أكاديمية تصنع <br /><span className="text-[var(--accent)]">لاعبين، لا متفرّجين.</span></h1>
             <p className="lead text-white/70 mt-6 max-w-2xl">٣ برامج مدروسة علمياً، تأخذك من ممسك المضرب لأول مرة إلى صفوف لاعبي البطولات.</p>
           </div>
-          <div className="lg:col-span-5 grid grid-cols-3 gap-4">
+          <div className="lg:col-span-5 grid grid-cols-3 gap-2 sm:gap-4">
             {[{v:"+12",l:"مدرب معتمد"},{v:"+800",l:"متدرّب سنوياً"},{v:"98%",l:"نسبة التطور"}].map((s) => (
-              <div key={s.l} className="card-night p-5 text-center">
-                <div className="text-3xl font-black text-[var(--accent)] tracking-tight">{s.v}</div>
+              <div key={s.l} className="card-night p-3 sm:p-5 text-center">
+                <div className="text-xl sm:text-3xl font-black text-[var(--accent)] tracking-tight">{s.v}</div>
                 <p className="text-xs text-white/55 mt-2">{s.l}</p>
               </div>
             ))}
@@ -33,19 +33,19 @@ export default function AcademyPage() {
         </div>
       </section>
 
-      <section className="py-24 md:py-32">
+      <section className="py-16 md:py-24 lg:py-32">
         <div className="container-luxury">
-          <div className="text-center max-w-2xl mx-auto mb-20">
+          <div className="text-center max-w-2xl mx-auto mb-12 md:mb-20">
             <span className="eyebrow">برامج الأكاديمية</span>
             <h2 className="display-2 text-[var(--primary)] mt-4 mb-6">ابدأ من حيث <span className="text-[var(--accent)]">أنت الآن.</span></h2>
           </div>
-          <div className="space-y-32">
+          <div className="space-y-16 md:space-y-32">
             {siteConfig.academyPrograms.map((program, idx) => {
               const isEven = idx % 2 === 1;
               return (
                 <article key={idx} className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
                   <div className={`lg:col-span-6 relative ${isEven ? "lg:order-2" : "lg:order-1"}`}>
-                    <div className="relative h-[560px] rounded-[var(--radius-lg)] overflow-hidden">
+                    <div className="relative h-[280px] sm:h-[400px] lg:h-[560px] rounded-[var(--radius-lg)] overflow-hidden">
                       <Image src={program.image} alt={program.title} fill className="object-cover" />
                       <div className="absolute inset-0 bg-gradient-to-t from-[var(--primary)]/50 to-transparent" />
                       <div className="absolute top-6 right-6"><span className="pill-light">برنامج 0{idx + 1}</span></div>
@@ -53,7 +53,7 @@ export default function AcademyPage() {
                   </div>
                   <div className={`lg:col-span-6 ${isEven ? "lg:order-1" : "lg:order-2"}`}>
                     <span className="eyebrow">المستوى {idx === 0 ? "المبتدئ" : idx === 1 ? "المتقدم" : "الناشئة"}</span>
-                    <h3 className="text-4xl font-black text-[var(--primary)] tracking-tight mt-4 mb-6">{program.title}</h3>
+                    <h3 className="text-2xl sm:text-4xl font-black text-[var(--primary)] tracking-tight mt-4 mb-6">{program.title}</h3>
                     <p className="lead mb-8">{program.description}</p>
                     <div className="space-y-3 mb-10">
                       {["تقييم مستوى مفصّل قبل البدء","تتبّع تقدّمك أسبوعياً","تطبيق المهارات في مباريات حقيقية","شهادة إتمام البرنامج"].map((feat) => (
@@ -72,7 +72,7 @@ export default function AcademyPage() {
         </div>
       </section>
 
-      <section className="py-24 md:py-32 surface-luxe">
+      <section className="py-16 md:py-24 lg:py-32 surface-luxe">
         <div className="container-luxury">
           <div className="max-w-2xl mb-16">
             <span className="eyebrow">لماذا أكاديميتنا</span>

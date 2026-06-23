@@ -22,11 +22,11 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-24 md:py-32">
+      <section className="py-16 md:py-24 lg:py-32">
         <div className="container-luxury">
-          <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+          <div className="grid lg:grid-cols-12 gap-10 lg:gap-20 items-center">
             <div className="lg:col-span-6">
-              <div className="relative h-[600px] rounded-[var(--radius-lg)] overflow-hidden">
+              <div className="relative h-[300px] sm:h-[400px] lg:h-[600px] rounded-[var(--radius-lg)] overflow-hidden">
                 <Image src={siteConfig.aboutImage} alt="" fill className="object-cover" />
               </div>
             </div>
@@ -43,25 +43,25 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-24 md:py-32 surface-luxe">
+      <section className="py-16 md:py-24 lg:py-32 surface-luxe">
         <div className="container-luxury">
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-[var(--background-elev)] border border-[var(--border)] rounded-[var(--radius-lg)] p-10 md:p-12">
+          <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
+            <div className="bg-[var(--background-elev)] border border-[var(--border)] rounded-[var(--radius-lg)] p-6 sm:p-10 md:p-12">
               <div className="w-14 h-14 rounded-2xl bg-[var(--accent)]/10 border border-[var(--accent)]/30 flex items-center justify-center mb-8">
                 <Eye className="w-6 h-6 text-[var(--accent)]" />
               </div>
               <span className="eyebrow">رؤيتنا</span>
-              <h3 className="text-3xl font-bold text-[var(--primary)] mt-3 mb-5">أن نكون المرجع <span className="text-[var(--accent)]">للبادل في المملكة.</span></h3>
+              <h3 className="text-2xl sm:text-3xl font-bold text-[var(--primary)] mt-3 mb-5">أن نكون المرجع <span className="text-[var(--accent)]">للبادل في المملكة.</span></h3>
               <p className="text-[var(--muted)] leading-relaxed">ليس بأن نملك أكبر ملعب، بل بأن نقدّم أفضل تجربة.</p>
             </div>
-            <div className="bg-[var(--primary)] text-white rounded-[var(--radius-lg)] p-10 md:p-12 relative overflow-hidden">
+            <div className="bg-[var(--primary)] text-white rounded-[var(--radius-lg)] p-6 sm:p-10 md:p-12 relative overflow-hidden">
               <div className="absolute -top-12 -right-12 w-40 h-40 rounded-full bg-[var(--accent)]/15 blur-3xl"></div>
               <div className="relative z-10">
                 <div className="w-14 h-14 rounded-2xl bg-[var(--accent)]/15 border border-[var(--accent)]/30 flex items-center justify-center mb-8">
                   <Target className="w-6 h-6 text-[var(--accent)]" />
                 </div>
                 <span className="eyebrow">رسالتنا</span>
-                <h3 className="text-3xl font-bold mt-3 mb-5">نشر ثقافة البادل <span className="text-[var(--accent)]">برؤية سعودية.</span></h3>
+                <h3 className="text-2xl sm:text-3xl font-bold mt-3 mb-5">نشر ثقافة البادل <span className="text-[var(--accent)]">برؤية سعودية.</span></h3>
                 <p className="text-white/65 leading-relaxed">نوفّر بيئة احترافية ومدربين دوليين مع حفاظ على هويتنا السعودية.</p>
               </div>
             </div>

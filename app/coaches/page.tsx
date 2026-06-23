@@ -22,14 +22,14 @@ export default function CoachesPage() {
         </div>
       </section>
 
-      <section className="py-24 md:py-32">
-        <div className="container-luxury space-y-24">
+      <section className="py-16 md:py-24 lg:py-32">
+        <div className="container-luxury space-y-16 md:space-y-24">
           {siteConfig.coaches.map((coach, idx) => {
             const isEven = idx % 2 === 1;
             return (
               <article key={coach.slug} className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
                 <div className={`lg:col-span-5 relative ${isEven ? "lg:order-2" : "lg:order-1"}`}>
-                  <div className="relative h-[560px] rounded-[var(--radius-lg)] overflow-hidden">
+                  <div className="relative h-[300px] sm:h-[420px] lg:h-[560px] rounded-[var(--radius-lg)] overflow-hidden">
                     <Image src={coach.image} alt={coach.name} fill className="object-cover object-top" />
                     <div className="absolute inset-0 bg-gradient-to-t from-[var(--primary)]/40 to-transparent" />
                     <div className="absolute top-6 right-6"><span className="pill-light">المدرب 0{idx + 1}</span></div>
@@ -37,7 +37,7 @@ export default function CoachesPage() {
                 </div>
                 <div className={`lg:col-span-7 ${isEven ? "lg:order-1" : "lg:order-2"}`}>
                   <span className="eyebrow">{coach.experience} في تدريب البادل</span>
-                  <h2 className="text-4xl font-black text-[var(--primary)] tracking-tight mt-4 mb-6">{coach.name}</h2>
+                  <h2 className="text-2xl sm:text-4xl font-black text-[var(--primary)] tracking-tight mt-4 mb-6">{coach.name}</h2>
                   <p className="lead mb-8 italic">"{coach.bio}"</p>
                   <div className="grid sm:grid-cols-3 gap-4 mb-10">
                     <div className="bg-[var(--background-elev)] border border-[var(--border)] rounded-2xl p-5">
