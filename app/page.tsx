@@ -53,7 +53,7 @@ export default function HomePage() {
               </div>
 
               <div className="mt-10 sm:mt-14 pt-8 sm:pt-10 border-t border-white/10 grid grid-cols-3 gap-3 sm:gap-6">
-                <div><div className="text-2xl sm:text-4xl font-black number-luxury">8</div><p className="text-[10px] sm:text-[11px] text-white/55 mt-1 sm:mt-2 leading-relaxed">ملعب داخلي وخارجي</p></div>
+                <div><div className="text-2xl sm:text-4xl font-black number-luxury">9</div><p className="text-[10px] sm:text-[11px] text-white/55 mt-1 sm:mt-2 leading-relaxed">ملعب داخلي وخارجي</p></div>
                 <div><div className="text-2xl sm:text-4xl font-black number-luxury">18h</div><p className="text-[10px] sm:text-[11px] text-white/55 mt-1 sm:mt-2 leading-relaxed">8:30 ص — 2:30 ص</p></div>
                 <div><div className="text-2xl sm:text-4xl font-black number-luxury">5★</div><p className="text-[10px] sm:text-[11px] text-white/55 mt-1 sm:mt-2 leading-relaxed">على Playtomic</p></div>
               </div>
@@ -382,7 +382,7 @@ export default function HomePage() {
               <span className="eyebrow">الملاعب</span>
               <h2 className="display-2 mt-4 text-[var(--primary)]">اختر ملعبك.</h2>
             </div>
-            <p className="text-[var(--muted)] max-w-md text-lg">8 ملاعب بمواصفات مختلفة — 3 داخلية، 5 خارجية، وملعب WHOOP الحصري.</p>
+            <p className="text-[var(--muted)] max-w-md text-lg">9 ملاعب بمواصفات مختلفة — 3 داخلية، 6 خارجية، بما فيهم WHOOP's Court وCentral Court.</p>
           </div>
           <div className="grid md:grid-cols-12 gap-6">
             {siteConfig.courts.map((court, idx) => (

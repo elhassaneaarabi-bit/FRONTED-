@@ -24,7 +24,7 @@ const ibm = IBM_Plex_Sans_Arabic({
 
 export const metadata: Metadata = {
   title: `Padel Rush | بادل رَش — Boulevard Riyadh City`,
-  description: `Padel Rush · DON'T MISS OUT ON AN EXPERIENCE. 8 ملاعب بادل داخلية وخارجية في Boulevard Riyadh City. احجز عبر Playtomic. King of the Court، Women Day، أكاديمية، ومتجر.`
+  description: `Padel Rush · DON'T MISS OUT ON AN EXPERIENCE. 9 ملاعب بادل داخلية وخارجية في Boulevard Riyadh City. احجز عبر Playtomic. King of the Court، Women Day، أكاديمية، ومتجر.`
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

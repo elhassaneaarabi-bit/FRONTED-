@@ -129,6 +129,17 @@ export const siteConfig = {
       peakSlots: ["18:30", "20:00", "22:00"],
       offPeakSlots: ["08:30", "10:30", "16:30"],
       price: 210
+    },
+    {
+      slug: "central-court",
+      name: "Central Court — خارجي",
+      type: "Outdoor",
+      image: images.courts.central, // → "/courts/court-09.jpg"
+      description: "الملعب المركزي — أكبر ملعب خارجي بتصميم استاد مصغّر مع مدرجات للمشاهدين، مخصص للبطولات والمباريات الكبرى.",
+      features: ["مدرجات مشاهدين", "إضاءة استاد", "أرضية بطولات", "كاميرات بث مباشر"],
+      peakSlots: ["19:00", "21:00", "23:00"],
+      offPeakSlots: ["10:00", "14:00", "17:00"],
+      price: 350
     }
   ],
   pricing: {
@@ -154,11 +165,11 @@ export const siteConfig = {
       benefits: ["أولوية حجز قبل 7 أيام (VIP)", "خصم 25% على الحجوزات والتدريب", "دخول مجاني لجميع البطولات الداخلية", "تجميد العضوية 30 يوماً", "حقيبة Padel Rush كاملة"] }
   ],
   coaches: [
-    { slug: "coach-01", name: "Coach 01",
+    { slug: "adrian-blanco", name: "Adrian Blanco Antelo",
       image: images.coaches.c01, // → "/coaches/coach-01.jpg"
-      experience: "8 سنوات", certifications: ["FIP Level 1", "Saudi Padel Federation"],
-      specialties: ["المبتدئين", "الدفاع", "التكتيك الأساسي"],
-      bio: "مدرب معتمد بخبرة في تأسيس اللاعبين الجدد وبناء أساسيات قوية في رياضة البادل." },
+      experience: "10+ سنوات", certifications: ["Professional Padel Coach", "FIP Certified"],
+      specialties: ["جميع المستويات", "التكتيك المتقدم", "التحضير للبطولات"],
+      bio: "مدرب محترف إسباني، يقدم دورات تدريبية متكاملة لجميع المستويات من المبتدئين حتى المحترفين عبر Playtomic Academy." },
     { slug: "coach-02", name: "Coach 02",
       image: images.coaches.c02, // → "/coaches/coach-02.jpg"
       experience: "6 سنوات", certifications: ["Padel Academy Coach"],
@@ -208,7 +219,10 @@ export const siteConfig = {
       image: images.tournaments.open },
     { slug: "ladies-cup", title: "Ladies Cup", date: "مارس 2026",
       category: "سيدات — جميع الفئات", prize: "20,000 ر.س", status: "upcoming",
-      image: images.tournaments.ladies }
+      image: images.tournaments.ladies },
+    { slug: "nextgen-tournament", title: "🏆 NextGen Tournament", date: "26 يونيو 2026 — 9 مساءً",
+      category: "الفئة 0-7", prize: "180 ر.س رسوم الاشتراك", status: "upcoming",
+      image: images.tournaments.open }
   ],
   testimonials: [
     { name: "عبدالله السالم", role: "لاعب منتظم",
@@ -255,20 +269,32 @@ export const siteConfig = {
     appStore: "https://apps.apple.com/app/playtomic/id892abordar",
   },
   stats: {
-    courts: 8,
+    courts: 9,
     indoorCourts: 3,
-    outdoorCourts: 5,
+    outdoorCourts: 6,
     coachingYears: "5+",
     openSince: 2021,
     dailyPlayers: "200+",
   },
+  amenities: [
+    "Disabled Access — وصول لذوي الاحتياجات الخاصة",
+    "Free Parking — مواقف مجانية",
+    "Private Parking — مواقف خاصة",
+    "Store — متجر بادل",
+    "Vending Machine — آلات بيع",
+    "Changing Room — غرف تبديل",
+    "Lockers — خزائن",
+    "WiFi — واي فاي مجاني",
+  ],
   features: [
     "تكييف مركزي في الملاعب الداخلية",
     "إضاءة ليلية احترافية",
-    "غرف تبديل مجهزة بالكامل",
+    "غرف تبديل مجهزة بالكامل مع خزائن",
     "كافيه ومتجر بادل داخل النادي",
     "تدريب للمبتدئين والمحترفين",
     "برنامج Kids Rush للأطفال",
-    "جلسات يوغا وبادل",
+    "مواقف مجانية وخاصة",
+    "واي فاي مجاني",
+    "وصول لذوي الاحتياجات الخاصة",
   ],
 } as const;

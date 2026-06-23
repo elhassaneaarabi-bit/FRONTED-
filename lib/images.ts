@@ -34,7 +34,8 @@ export const images = {
     outdoor2: PICSUM("padelrush-outdoor-2", 1400, 1000),
     outdoor3: PICSUM("padelrush-outdoor-3", 1400, 1000),
     outdoor4: PICSUM("padelrush-outdoor-4", 1400, 1000),
-    outdoor5: PICSUM("padelrush-outdoor-5", 1400, 1000)
+    outdoor5: PICSUM("padelrush-outdoor-5", 1400, 1000),
+    central: PICSUM("padelrush-central-court", 1400, 1000)
   },
 
   // Coaches (6 مدربين)
