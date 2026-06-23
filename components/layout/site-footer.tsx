@@ -74,7 +74,7 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-16 pt-8 border-t border-white/8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <p className="text-white/40 text-xs">© {new Date().getFullYear()} <span className="text-[var(--gold-soft)]/70">Padel Rush</span> · {siteConfig.email} · جميع الحقوق محفوظة.</p>
+          <p className="text-white/40 text-xs">© {new Date().getFullYear()} <span className="text-[var(--gold-soft)]/70">PADEL RUSH</span> @ BLVD RUH CITY · {siteConfig.email} · جميع الحقوق محفوظة.</p>
           <div className="flex gap-6 text-xs text-white/40">
             <Link href="/privacy" className="hover:text-[var(--gold-soft)] transition-colors">سياسة الخصوصية</Link>
             <Link href="/terms" className="hover:text-[var(--gold-soft)] transition-colors">الشروط والأحكام</Link>

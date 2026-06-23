@@ -107,6 +107,28 @@ export const siteConfig = {
       peakSlots: ["18:30", "20:00", "21:30"],
       offPeakSlots: ["08:30", "11:30", "16:30"],
       price: 210
+    },
+    {
+      slug: "outdoor-court-4",
+      name: "Court 4 — خارجي",
+      type: "Outdoor",
+      image: images.courts.outdoor4, // → "/courts/court-07.jpg"
+      description: "ملعب خارجي بأجواء مفتوحة مع إضاءة ليلية احترافية.",
+      features: ["إضاءة ليلية", "أرضية معتمدة"],
+      peakSlots: ["18:00", "19:30", "21:00"],
+      offPeakSlots: ["09:00", "11:00", "16:00"],
+      price: 210
+    },
+    {
+      slug: "outdoor-court-5",
+      name: "Court 5 — خارجي",
+      type: "Outdoor",
+      image: images.courts.outdoor5, // → "/courts/court-08.jpg"
+      description: "ملعب خارجي واسع، ممتاز للمجموعات والحجوزات المسائية.",
+      features: ["إضاءة LED", "أرضية معتمدة", "زجاج مقوّى"],
+      peakSlots: ["18:30", "20:00", "22:00"],
+      offPeakSlots: ["08:30", "10:30", "16:30"],
+      price: 210
     }
   ],
   pricing: {
@@ -204,5 +226,49 @@ export const siteConfig = {
     { title: "BLVD Atmosphere", type: "image", src: images.gallery.g2 },
     { title: "King of the Court", type: "image", src: images.gallery.g3 },
     { title: "Women Day", type: "image", src: images.gallery.g4 }
-  ]
+  ],
+  news: [
+    {
+      date: "2023-03-29",
+      title: "حمّل Playtomic اليوم واحجز بنقرة واحدة 📱",
+      excerpt: "حجز جلسة البادل أصبح أسهل من أي وقت! حمّل Playtomic واحجز ملعبك بضغطة زر.",
+    },
+    {
+      date: "2023-01-27",
+      title: "King of The Court 🤴🎾",
+      excerpt: "كل اثنين من 7 إلى 9 مساءً — منافسة اجتماعية ممتعة للفئة C رجال. سجّل الآن وأحضر شريكك!",
+    },
+    {
+      date: "2023-01-16",
+      title: "Women Exclusive Day 🙋‍♀️🎾",
+      excerpt: "كل أربعاء من 6 إلى 7:30 مساءً — جلسات حصرية للسيدات. للحجز عبر واتساب.",
+    },
+    {
+      date: "2022-12-15",
+      title: "الافتتاح التجريبي — SOFT OPENING 🎾🔥",
+      excerpt: "مرحباً بكم في بادل رش — لا تفوّت التجربة!",
+    },
+  ],
+  appLinks: {
+    playtomic: "https://playtomic.com/clubs/padel-rush",
+    googlePlay: "https://play.google.com/store/apps/details?id=com.playtomic.app",
+    appStore: "https://apps.apple.com/app/playtomic/id892abordar",
+  },
+  stats: {
+    courts: 8,
+    indoorCourts: 3,
+    outdoorCourts: 5,
+    coachingYears: "5+",
+    openSince: 2021,
+    dailyPlayers: "200+",
+  },
+  features: [
+    "تكييف مركزي في الملاعب الداخلية",
+    "إضاءة ليلية احترافية",
+    "غرف تبديل مجهزة بالكامل",
+    "كافيه ومتجر بادل داخل النادي",
+    "تدريب للمبتدئين والمحترفين",
+    "برنامج Kids Rush للأطفال",
+    "جلسات يوغا وبادل",
+  ],
 } as const;

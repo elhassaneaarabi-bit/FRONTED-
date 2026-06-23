@@ -53,7 +53,7 @@ export default function HomePage() {
               </div>
 
               <div className="mt-10 sm:mt-14 pt-8 sm:pt-10 border-t border-white/10 grid grid-cols-3 gap-3 sm:gap-6">
-                <div><div className="text-2xl sm:text-4xl font-black number-luxury">11</div><p className="text-[10px] sm:text-[11px] text-white/55 mt-1 sm:mt-2 leading-relaxed">ملعب داخلي وخارجي</p></div>
+                <div><div className="text-2xl sm:text-4xl font-black number-luxury">8</div><p className="text-[10px] sm:text-[11px] text-white/55 mt-1 sm:mt-2 leading-relaxed">ملعب داخلي وخارجي</p></div>
                 <div><div className="text-2xl sm:text-4xl font-black number-luxury">18h</div><p className="text-[10px] sm:text-[11px] text-white/55 mt-1 sm:mt-2 leading-relaxed">8:30 ص — 2:30 ص</p></div>
                 <div><div className="text-2xl sm:text-4xl font-black number-luxury">5★</div><p className="text-[10px] sm:text-[11px] text-white/55 mt-1 sm:mt-2 leading-relaxed">على Playtomic</p></div>
               </div>
@@ -382,7 +382,7 @@ export default function HomePage() {
               <span className="eyebrow">الملاعب</span>
               <h2 className="display-2 mt-4 text-[var(--primary)]">اختر ملعبك.</h2>
             </div>
-            <p className="text-[var(--muted)] max-w-md text-lg">11 ملعباً بمواصفات مختلفة — داخلية، خارجية، وملعب WHOOP الحصري.</p>
+            <p className="text-[var(--muted)] max-w-md text-lg">8 ملاعب بمواصفات مختلفة — 3 داخلية، 5 خارجية، وملعب WHOOP الحصري.</p>
           </div>
           <div className="grid md:grid-cols-12 gap-6">
             {siteConfig.courts.map((court, idx) => (
@@ -410,6 +410,46 @@ export default function HomePage() {
       </section>
 
       <Testimonials variant="light" />
+
+      {/* ═══════════ DOWNLOAD APP — Conversion Section ═══════════ */}
+      <section className="py-16 md:py-24 surface-night text-white relative overflow-hidden">
+        <div className="absolute -top-32 right-1/4 w-[500px] h-[500px] rounded-full bg-[var(--accent)]/12 blur-[140px]"></div>
+        <div className="container-luxury relative z-10">
+          <div className="grid lg:grid-cols-12 gap-10 items-center">
+            <div className="lg:col-span-7">
+              <span className="eyebrow text-[var(--gold-soft)]">حمّل التطبيق</span>
+              <h2 className="display-2 mt-4 mb-6">احجز بنقرة واحدة<br /><span className="text-[var(--accent)]">عبر Playtomic 📱</span></h2>
+              <p className="lead text-white/70 mb-8 max-w-xl">
+                حمّل Playtomic اليوم واحجز جلسة البادل بأقل من 30 ثانية. شوف الأوقات المتاحة، ادفع أونلاين، واستلم تأكيدك فوراً.
+              </p>
+              <div className="flex flex-wrap gap-4 mb-8">
+                <a href={siteConfig.appLinks.googlePlay} target="_blank" rel="noopener" className="inline-flex items-center gap-3 bg-white/10 hover:bg-white/15 border border-white/15 rounded-xl px-5 py-3 transition-colors">
+                  <svg className="w-7 h-7" viewBox="0 0 24 24" fill="currentColor"><path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.61 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/></svg>
+                  <div className="text-right"><div className="text-[9px] text-white/60 uppercase tracking-wider">GET IT ON</div><div className="text-sm font-bold text-white">Google Play</div></div>
+                </a>
+                <a href={siteConfig.appLinks.appStore} target="_blank" rel="noopener" className="inline-flex items-center gap-3 bg-white/10 hover:bg-white/15 border border-white/15 rounded-xl px-5 py-3 transition-colors">
+                  <svg className="w-7 h-7" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71,19.5C17.88,20.5 17,21.4 15.66,21.4C14.32,21.4 13.87,20.5 12.33,20.5C10.77,20.5 10.18,21.4 8.94,21.4C7.56,21.4 6.63,20.4 5.76,19.4C3.76,16.96 2.3,12.8 4.43,10C5.5,8.65 7.11,7.9 8.63,7.9C10.03,7.9 10.95,8.8 12.15,8.8C13.31,8.8 14.05,7.9 15.68,7.9C17.05,7.9 18.45,8.5 19.5,9.7C16.27,11.45 16.78,16.09 20.24,17.2C19.7,18.4 19.31,18.9 18.71,19.5M13,3.5C13.73,2.67 14.94,2.04 15.94,2C16.07,3.17 15.6,4.35 14.9,5.19C14.21,6.04 13.07,6.7 11.95,6.61C11.8,5.46 12.36,4.26 13,3.5Z"/></svg>
+                  <div className="text-right"><div className="text-[9px] text-white/60 uppercase tracking-wider">Download on the</div><div className="text-sm font-bold text-white">App Store</div></div>
+                </a>
+              </div>
+              <div className="flex flex-wrap items-center gap-6 text-xs text-white/50">
+                <span className="inline-flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-green-400"></span>حجز فوري 24/7</span>
+                <span className="inline-flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-green-400"></span>دفع آمن أونلاين</span>
+                <span className="inline-flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-green-400"></span>تأكيد لحظي</span>
+              </div>
+            </div>
+            <div className="lg:col-span-5 hidden lg:flex justify-center">
+              <div className="relative w-[280px] h-[500px] bg-gradient-to-br from-[var(--accent)]/20 to-[var(--accent)]/5 rounded-[40px] border border-[var(--accent)]/30 flex items-center justify-center">
+                <div className="text-center">
+                  <div className="text-6xl font-black text-[var(--accent)] mb-3">PR</div>
+                  <div className="text-white/60 text-sm">Playtomic</div>
+                  <div className="text-[var(--accent)] text-xs mt-1 font-bold">PADEL RUSH</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <InstagramFeed variant="dark" />
 

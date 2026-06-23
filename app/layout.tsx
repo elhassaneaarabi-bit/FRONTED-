@@ -4,6 +4,7 @@ import { siteConfig } from "@/lib/site-config";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { WhatsAppFAB } from "@/components/layout/whatsapp-fab";
+import { StickyBookingBar } from "@/components/layout/sticky-booking-bar";
 import { Pixels } from "@/components/analytics/pixels";
 import "@/styles/globals.css";
 
@@ -23,7 +24,7 @@ const ibm = IBM_Plex_Sans_Arabic({
 
 export const metadata: Metadata = {
   title: `Padel Rush | بادل رَش — Boulevard Riyadh City`,
-  description: `Padel Rush · DON'T MISS OUT ON AN EXPERIENCE. 11 ملعب بادل داخلي وخارجي في Boulevard Riyadh City. احجز عبر Playtomic. King of the Court، Women Day، أكاديمية، ومتجر.`
+  description: `Padel Rush · DON'T MISS OUT ON AN EXPERIENCE. 8 ملاعب بادل داخلية وخارجية في Boulevard Riyadh City. احجز عبر Playtomic. King of the Court، Women Day، أكاديمية، ومتجر.`
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
@@ -34,6 +35,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         {children}
         <SiteFooter />
         <WhatsAppFAB />
+        <StickyBookingBar />
         <Pixels />
       </body>
     </html>
