@@ -53,9 +53,9 @@ export default function HomePage() {
               </div>
 
               <div className="mt-10 sm:mt-14 pt-8 sm:pt-10 border-t border-white/10 grid grid-cols-3 gap-3 sm:gap-6">
-                <div><div className="text-2xl sm:text-4xl font-black number-luxury">11</div><p className="text-[10px] sm:text-[11px] text-white/55 mt-1 sm:mt-2 leading-relaxed tracking-wider uppercase">ملعب داخلي وخارجي</p></div>
-                <div><div className="text-2xl sm:text-4xl font-black number-luxury">18h</div><p className="text-[10px] sm:text-[11px] text-white/55 mt-1 sm:mt-2 leading-relaxed tracking-wider uppercase">8:30 ص — 2:30 ص</p></div>
-                <div><div className="text-2xl sm:text-4xl font-black number-luxury">5★</div><p className="text-[10px] sm:text-[11px] text-white/55 mt-1 sm:mt-2 leading-relaxed tracking-wider uppercase">على Playtomic</p></div>
+                <div><div className="text-2xl sm:text-4xl font-black number-luxury">11</div><p className="text-[10px] sm:text-[11px] text-white/55 mt-1 sm:mt-2 leading-relaxed">ملعب داخلي وخارجي</p></div>
+                <div><div className="text-2xl sm:text-4xl font-black number-luxury">18h</div><p className="text-[10px] sm:text-[11px] text-white/55 mt-1 sm:mt-2 leading-relaxed">8:30 ص — 2:30 ص</p></div>
+                <div><div className="text-2xl sm:text-4xl font-black number-luxury">5★</div><p className="text-[10px] sm:text-[11px] text-white/55 mt-1 sm:mt-2 leading-relaxed">على Playtomic</p></div>
               </div>
             </div>
 
@@ -201,17 +201,17 @@ export default function HomePage() {
               <div className="flex flex-wrap items-stretch gap-x-6 sm:gap-x-10 gap-y-6 mb-10 sm:mb-14 animate-fade-up">
                 <div>
                   <div className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-[var(--accent)] mb-1">+12K</div>
-                  <p className="text-[11px] uppercase tracking-[0.18em] text-white/55">مباراة سنوياً</p>
+                  <p className="text-[11px] text-white/55">مباراة سنوياً</p>
                 </div>
                 <div className="w-px bg-white/15"></div>
                 <div>
                   <div className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-[var(--accent)] mb-1">+850</div>
-                  <p className="text-[11px] uppercase tracking-[0.18em] text-white/55">عضو نشط</p>
+                  <p className="text-[11px] text-white/55">عضو نشط</p>
                 </div>
                 <div className="w-px bg-white/15"></div>
                 <div>
                   <div className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-[var(--accent)] mb-1">4.9★</div>
-                  <p className="text-[11px] uppercase tracking-[0.18em] text-white/55">Playtomic</p>
+                  <p className="text-[11px] text-white/55">Playtomic</p>
                 </div>
               </div>
 
@@ -292,7 +292,7 @@ export default function HomePage() {
                 ].map((spec) => (
                   <div key={spec.label} className="border-r-2 border-[var(--accent)] pr-4">
                     <div className="text-2xl font-bold text-[var(--primary)] tracking-tight">{spec.value}</div>
-                    <div className="text-xs text-[var(--muted)] mt-1 tracking-wider uppercase">{spec.label}</div>
+                    <div className="text-xs text-[var(--muted)] mt-1">{spec.label}</div>
                   </div>
                 ))}
               </div>

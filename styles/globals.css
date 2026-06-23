@@ -98,7 +98,7 @@ body {
   color: var(--foreground);
   font-family: var(--font-ibm-plex-arabic), var(--font-tajawal), system-ui, sans-serif;
   font-feature-settings: "kern", "liga", "ss01";
-  letter-spacing: -0.005em;
+  letter-spacing: normal;
   overflow-x: hidden;
 }
 
@@ -113,34 +113,34 @@ body {
   font-weight: 900;
   font-size: clamp(2.5rem, 5.8vw, 5.5rem);
   line-height: 0.98;
-  letter-spacing: -0.035em;
+  letter-spacing: normal;
 }
 .display-2 {
   font-family: var(--font-tajawal);
   font-weight: 800;
   font-size: clamp(2rem, 4.2vw, 3.75rem);
   line-height: 1.04;
-  letter-spacing: -0.028em;
+  letter-spacing: normal;
 }
 .heading-1 {
   font-family: var(--font-tajawal);
   font-weight: 800;
   font-size: clamp(1.75rem, 3vw, 2.5rem);
   line-height: 1.1;
-  letter-spacing: -0.02em;
+  letter-spacing: normal;
 }
 .heading-2 {
   font-family: var(--font-tajawal);
   font-weight: 700;
   font-size: clamp(1.375rem, 2.2vw, 1.875rem);
   line-height: 1.2;
-  letter-spacing: -0.015em;
+  letter-spacing: normal;
 }
 .eyebrow {
   font-family: var(--font-ibm-plex-arabic);
   font-weight: 700;
   font-size: 0.75rem;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--accent-deep);
   display: inline-flex;
@@ -164,7 +164,7 @@ body {
   font-family: var(--font-ibm-plex-arabic);
   font-weight: 600;
   font-size: 0.75rem;
-  letter-spacing: 0.26em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
@@ -417,7 +417,7 @@ body {
   color: var(--accent);
   font-size: 0.7rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 
@@ -429,7 +429,7 @@ body {
   color: var(--ink);
   font-size: 0.7rem;
   font-weight: 800;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 
@@ -441,7 +441,7 @@ body {
   color: var(--green-soft);
   font-size: 0.7rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 
@@ -453,7 +453,7 @@ body {
   color: #fff;
   font-size: 0.7rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   backdrop-filter: blur(8px);
 }
@@ -465,7 +465,7 @@ body {
   color: var(--accent);
   font-size: 0.7rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 
