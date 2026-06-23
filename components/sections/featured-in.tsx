@@ -12,9 +12,9 @@ export function FeaturedIn({ variant = "light" }: { variant?: "light" | "dark" }
           <p className={`text-center text-[10px] tracking-[0.3em] uppercase font-bold ${isDark ? "text-[var(--gold-soft)]" : "text-[var(--gold-deep)]"}`}>شركاء بادل رَش</p>
           <span className="gold-line"></span>
         </div>
-        <div className="flex flex-wrap items-center justify-around gap-x-14 gap-y-6">
+        <div className="flex flex-wrap items-center justify-center gap-x-6 sm:gap-x-14 gap-y-4 sm:gap-y-6">
           {logos.map((code) => (
-            <span key={code} className={`font-black tracking-[0.18em] text-sm md:text-base transition-all ${isDark ? "text-white/55 hover:text-[var(--gold-soft)]" : "text-[var(--ink)]/55 hover:text-[var(--accent)]"} hover:-translate-y-0.5`}>{code}</span>
+            <span key={code} className={`font-black tracking-[0.1em] sm:tracking-[0.18em] text-[11px] sm:text-sm md:text-base transition-all ${isDark ? "text-white/55 hover:text-[var(--gold-soft)]" : "text-[var(--ink)]/55 hover:text-[var(--accent)]"} hover:-translate-y-0.5`}>{code}</span>
           ))}
         </div>
       </div>

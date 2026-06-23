@@ -142,13 +142,19 @@ export default function HomePage() {
       </section>
 
       <section className="bg-[var(--ink-deep)] text-white border-y border-[var(--gold)]/15">
-        <div className="container-luxury py-5">
-          <div className="flex items-center justify-between gap-4 text-xs flex-wrap">
-            <div className="flex items-center gap-3 text-white/70">
-              <Sparkles className="w-4 h-4 text-[var(--gold-soft)]" />
-              <span className="tracking-wider"><span className="text-[var(--gold-soft)] font-bold">👑 King of the Court</span> — كل اثنين 7-9 مساءً · <span className="text-[var(--accent-soft)] font-bold">🙋‍♀️ Women Day</span> — كل أربعاء 6-7:30 مساءً</span>
+        <div className="container-luxury py-4 sm:py-5">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4 text-xs">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-white/70">
+              <div className="flex items-center gap-2">
+                <Sparkles className="w-4 h-4 text-[var(--gold-soft)] shrink-0" />
+                <span><span className="text-[var(--gold-soft)] font-bold">👑 King of the Court</span> — كل اثنين 7-9 مساءً</span>
+              </div>
+              <div className="flex items-center gap-2 sm:pr-0 pr-6">
+                <span className="w-1 h-1 rounded-full bg-[var(--gold)]/40 hidden sm:block"></span>
+                <span><span className="text-[var(--accent-soft)] font-bold">🙋‍♀️ Women Day</span> — كل أربعاء 6-7:30 مساءً</span>
+              </div>
             </div>
-            <a href={siteConfig.bookingUrl} target="_blank" rel="noopener" className="text-[var(--gold-soft)] hover:text-white font-bold inline-flex items-center gap-2 group">انضم الآن <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /></a>
+            <a href={siteConfig.bookingUrl} target="_blank" rel="noopener" className="text-[var(--gold-soft)] hover:text-white font-bold inline-flex items-center gap-2 group shrink-0">انضم الآن <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /></a>
           </div>
         </div>
       </section>
