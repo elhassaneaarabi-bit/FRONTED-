@@ -52,10 +52,21 @@ export default function HomePage() {
                 </a>
               </div>
 
-              <div className="mt-10 sm:mt-14 pt-8 sm:pt-10 border-t border-white/10 grid grid-cols-3 gap-3 sm:gap-6">
-                <div><div className="text-2xl sm:text-4xl font-black number-luxury">9</div><p className="text-[10px] sm:text-[11px] text-white/55 mt-1 sm:mt-2 leading-relaxed">ملعب داخلي وخارجي</p></div>
-                <div><div className="text-2xl sm:text-4xl font-black number-luxury">18h</div><p className="text-[10px] sm:text-[11px] text-white/55 mt-1 sm:mt-2 leading-relaxed">8:30 ص — 2:30 ص</p></div>
-                <div><div className="text-2xl sm:text-4xl font-black number-luxury">5★</div><p className="text-[10px] sm:text-[11px] text-white/55 mt-1 sm:mt-2 leading-relaxed">على Playtomic</p></div>
+              <div className="mt-10 sm:mt-14 pt-8 sm:pt-10 border-t border-white/10 flex flex-wrap justify-start gap-6 sm:gap-10">
+                <div className="min-w-[60px]">
+                  <div className="text-3xl sm:text-4xl font-black number-luxury leading-none">9</div>
+                  <p className="text-[10px] sm:text-[11px] text-white/55 mt-2 leading-relaxed">ملعب</p>
+                </div>
+                <div className="w-px h-12 bg-white/15 hidden sm:block"></div>
+                <div className="min-w-[60px]">
+                  <div className="text-3xl sm:text-4xl font-black number-luxury leading-none">18h</div>
+                  <p className="text-[10px] sm:text-[11px] text-white/55 mt-2 leading-relaxed">يومياً</p>
+                </div>
+                <div className="w-px h-12 bg-white/15 hidden sm:block"></div>
+                <div className="min-w-[60px]">
+                  <div className="text-3xl sm:text-4xl font-black number-luxury leading-none">5★</div>
+                  <p className="text-[10px] sm:text-[11px] text-white/55 mt-2 leading-relaxed">Playtomic</p>
+                </div>
               </div>
             </div>
 
