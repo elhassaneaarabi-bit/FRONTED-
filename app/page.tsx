@@ -33,9 +33,9 @@ export default function HomePage() {
         <div className="container-luxury relative z-10 pt-28 pb-14 sm:pt-36 sm:pb-16 md:pt-40 md:pb-24 text-white">
           <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
             <div className="lg:col-span-6">
-              <div className="pill-gold mb-8 animate-fade-up">
-                <span className="w-1.5 h-1.5 rounded-full bg-[var(--gold-soft)] animate-pulse"></span>
-                BOULEVARD RIYADH CITY · منذ 2021
+              <div className="pill-gold mb-6 sm:mb-8 animate-fade-up text-[10px] sm:text-xs">
+                <span className="w-1.5 h-1.5 rounded-full bg-[var(--gold-soft)] animate-pulse shrink-0"></span>
+                BLVD RIYADH · منذ 2021
               </div>
               <h1 className="display-1 animate-fade-up">
                 DON'T MISS<br /><span className="text-[var(--accent)]">OUT ON AN</span><br />EXPERIENCE.
@@ -52,20 +52,18 @@ export default function HomePage() {
                 </a>
               </div>
 
-              <div className="mt-10 sm:mt-14 pt-8 sm:pt-10 border-t border-white/10 flex flex-wrap justify-start gap-6 sm:gap-10">
-                <div className="min-w-[60px]">
-                  <div className="text-3xl sm:text-4xl font-black number-luxury leading-none">9</div>
-                  <p className="text-[10px] sm:text-[11px] text-white/55 mt-2 leading-relaxed">ملعب</p>
+              <div className="mt-10 sm:mt-14 pt-8 sm:pt-10 border-t border-white/10 grid grid-cols-3 gap-2 sm:gap-6 w-full">
+                <div className="text-center">
+                  <div className="text-2xl sm:text-4xl font-black number-luxury leading-none">9</div>
+                  <p className="text-[10px] sm:text-[11px] text-white/55 mt-1.5 leading-tight">ملاعب</p>
                 </div>
-                <div className="w-px h-12 bg-white/15 hidden sm:block"></div>
-                <div className="min-w-[60px]">
-                  <div className="text-3xl sm:text-4xl font-black number-luxury leading-none">18h</div>
-                  <p className="text-[10px] sm:text-[11px] text-white/55 mt-2 leading-relaxed">يومياً</p>
+                <div className="text-center">
+                  <div className="text-2xl sm:text-4xl font-black number-luxury leading-none">18h</div>
+                  <p className="text-[10px] sm:text-[11px] text-white/55 mt-1.5 leading-tight">يومياً</p>
                 </div>
-                <div className="w-px h-12 bg-white/15 hidden sm:block"></div>
-                <div className="min-w-[60px]">
-                  <div className="text-3xl sm:text-4xl font-black number-luxury leading-none">5★</div>
-                  <p className="text-[10px] sm:text-[11px] text-white/55 mt-2 leading-relaxed">Playtomic</p>
+                <div className="text-center">
+                  <div className="text-2xl sm:text-4xl font-black number-luxury leading-none">5★</div>
+                  <p className="text-[10px] sm:text-[11px] text-white/55 mt-1.5 leading-tight">Playtomic</p>
                 </div>
               </div>
             </div>
@@ -128,9 +126,9 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-3 lg:hidden">
+          <div className="mt-10 sm:mt-16 grid grid-cols-2 gap-2 sm:gap-3 lg:hidden">
             {[siteConfig.courts[0].image, siteConfig.courts[2].image, siteConfig.coaches[0].image, siteConfig.tournaments[0].image].map((src, i) => (
-              <div key={i} className="relative aspect-[4/5] rounded-2xl overflow-hidden ring-1 ring-white/10">
+              <div key={i} className="relative aspect-[3/4] rounded-xl overflow-hidden ring-1 ring-white/10">
                 <Image src={src} alt="" fill className="object-cover" sizes="50vw" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[var(--primary)]/40 to-transparent" />
               </div>
@@ -142,19 +140,19 @@ export default function HomePage() {
       </section>
 
       <section className="bg-[var(--ink-deep)] text-white border-y border-[var(--gold)]/15">
-        <div className="container-luxury py-4 sm:py-5">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4 text-xs">
-            <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-white/70">
-              <div className="flex items-center gap-2">
-                <Sparkles className="w-4 h-4 text-[var(--gold-soft)] shrink-0" />
-                <span><span className="text-[var(--gold-soft)] font-bold">👑 King of the Court</span> — كل اثنين 7-9 مساءً</span>
-              </div>
-              <div className="flex items-center gap-2 sm:pr-0 pr-6">
-                <span className="w-1 h-1 rounded-full bg-[var(--gold)]/40 hidden sm:block"></span>
-                <span><span className="text-[var(--accent-soft)] font-bold">🙋‍♀️ Women Day</span> — كل أربعاء 6-7:30 مساءً</span>
-              </div>
+        <div className="container-luxury py-3 sm:py-5">
+          <div className="flex flex-col gap-2.5 text-[11px] sm:text-xs">
+            <div className="flex items-start gap-2 text-white/75">
+              <Sparkles className="w-3.5 h-3.5 text-[var(--gold-soft)] shrink-0 mt-0.5" />
+              <span><span className="text-[var(--gold-soft)] font-bold">👑 King of the Court</span> — كل اثنين 7-9 مساءً</span>
             </div>
-            <a href={siteConfig.bookingUrl} target="_blank" rel="noopener" className="text-[var(--gold-soft)] hover:text-white font-bold inline-flex items-center gap-2 group shrink-0">انضم الآن <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /></a>
+            <div className="flex items-start gap-2 text-white/75">
+              <span className="w-3.5 shrink-0" />
+              <span><span className="text-[var(--accent-soft)] font-bold">🙋‍♀️ Women Day</span> — كل أربعاء 6-7:30 مساءً</span>
+            </div>
+            <a href={siteConfig.bookingUrl} target="_blank" rel="noopener" className="text-[var(--gold-soft)] hover:text-white font-bold inline-flex items-center gap-1.5 self-start">
+              انضم الآن <ArrowLeft className="w-3.5 h-3.5" />
+            </a>
           </div>
         </div>
       </section>
@@ -296,20 +294,20 @@ export default function HomePage() {
                 <p className="text-[var(--muted)] text-sm leading-relaxed">مواد إنشاء معتمدة من World Padel Tour لضمان أداء مماثل للبطولات الدولية.</p>
               </div>
             </div>
-            <div className="lg:col-span-6">
+            <div className="lg:col-span-6 overflow-hidden">
               <span className="eyebrow">عن النادي</span>
-              <h2 className="display-2 mt-4 mb-6 text-[var(--primary)]">ليس مجرد ملعب،<br /><span className="text-[var(--accent)]">بل بيئة أداء كاملة.</span></h2>
-              <p className="lead mb-10">درسنا أدق التفاصيل من أرضية الملعب إلى تيار التكييف. الهدف؟ أن تخرج من كل مباراة بإحساس مختلف. هنا نلعب البادل كما يجب أن يُلعب.</p>
-              <div className="grid grid-cols-2 gap-6 mb-10">
+              <h2 className="display-2 mt-4 mb-4 sm:mb-6 text-[var(--primary)] text-balance">ليس مجرد ملعب،<br /><span className="text-[var(--accent)]">بل بيئة أداء كاملة.</span></h2>
+              <p className="lead mb-8 sm:mb-10 text-pretty">درسنا أدق التفاصيل من أرضية الملعب إلى تيار التكييف. الهدف؟ أن تخرج من كل مباراة بإحساس مختلف.</p>
+              <div className="grid grid-cols-2 gap-4 sm:gap-6 mb-8 sm:mb-10">
                 {[
                   { label: "زجاج بانورامي", value: "12مم" },
                   { label: "إضاءة LED", value: "1000 لوكس" },
                   { label: "تكييف", value: "22°م ثابت" },
                   { label: "أرضية", value: "WPT معتمدة" }
                 ].map((spec) => (
-                  <div key={spec.label} className="border-r-2 border-[var(--accent)] pr-4">
-                    <div className="text-2xl font-bold text-[var(--primary)] tracking-tight">{spec.value}</div>
-                    <div className="text-xs text-[var(--muted)] mt-1">{spec.label}</div>
+                  <div key={spec.label} className="border-r-2 border-[var(--accent)] pr-3 sm:pr-4">
+                    <div className="text-lg sm:text-2xl font-bold text-[var(--primary)]">{spec.value}</div>
+                    <div className="text-[11px] sm:text-xs text-[var(--muted)] mt-1 leading-tight">{spec.label}</div>
                   </div>
                 ))}
               </div>
@@ -497,17 +495,17 @@ export default function HomePage() {
             </div>
             <div className="lg:col-span-5 grid gap-4">
               {siteConfig.memberships.map((tier) => (
-                <div key={tier.name} className={`flex items-center justify-between p-6 rounded-2xl backdrop-blur-md transition-all hover:-translate-y-1 ${tier.popular ? "bg-[var(--ink)] text-white border border-[var(--ink)] shadow-[0_20px_40px_-10px_rgba(0,0,0,0.4)]" : "bg-white/40 border border-[var(--ink)]/15 hover:bg-white/60"}`}>
-                  <div>
-                    <div className="flex items-center gap-2 mb-1">
-                      <h4 className={`font-bold text-lg ${tier.popular ? "" : "text-[var(--ink)]"}`}>{tier.name}</h4>
-                      {tier.popular && <span className="text-[10px] bg-[var(--accent)] text-[var(--ink)] px-2 py-0.5 rounded-full font-black tracking-wider">POPULAR</span>}
+                <div key={tier.name} className={`flex items-center justify-between gap-3 p-4 sm:p-6 rounded-2xl backdrop-blur-md transition-all ${tier.popular ? "bg-[var(--ink)] text-white border border-[var(--ink)] shadow-[0_20px_40px_-10px_rgba(0,0,0,0.4)]" : "bg-white/40 border border-[var(--ink)]/15"}`}>
+                  <div className="min-w-0 flex-1">
+                    <div className="flex items-center gap-2 mb-1 flex-wrap">
+                      <h4 className={`font-bold text-base sm:text-lg ${tier.popular ? "" : "text-[var(--ink)]"}`}>{tier.name}</h4>
+                      {tier.popular && <span className="text-[9px] bg-[var(--accent)] text-[var(--ink)] px-2 py-0.5 rounded-full font-black">POPULAR</span>}
                     </div>
-                    <p className={`text-xs ${tier.popular ? "text-white/70" : "text-[var(--ink)]/60"}`}>{tier.benefits[0]}</p>
+                    <p className={`text-[11px] sm:text-xs leading-tight ${tier.popular ? "text-white/70" : "text-[var(--ink)]/60"}`}>{tier.benefits[0]}</p>
                   </div>
-                  <div className="text-right">
-                    <div className={`text-2xl font-black ${tier.popular ? "text-[var(--accent)]" : "text-[var(--ink)]"}`}>{tier.price}</div>
-                    <p className={`text-xs ${tier.popular ? "text-white/55" : "text-[var(--ink)]/55"}`}>{tier.period}</p>
+                  <div className="text-left shrink-0">
+                    <div className={`text-xl sm:text-2xl font-black ${tier.popular ? "text-[var(--accent)]" : "text-[var(--ink)]"}`}>{tier.price}</div>
+                    <p className={`text-[10px] sm:text-xs ${tier.popular ? "text-white/55" : "text-[var(--ink)]/55"}`}>{tier.period}</p>
                   </div>
                 </div>
               ))}

@@ -18,21 +18,21 @@ export function Testimonials({ variant = "light" }: { variant?: Variant }) {
             <h2 className="display-2 mt-4 mb-6">مجتمع <br /><span className="text-[var(--accent)]">يثق بالتفاصيل</span></h2>
             <p className={`lead ${isDark ? "text-white/65" : ""}`}>لم نبنِ ملاعب فقط، بل بنينا تجربة كاملة يحدّث عنها لاعبونا كل يوم.</p>
           </div>
-          <div className="lg:col-span-7 flex flex-wrap justify-around gap-4 sm:gap-6 self-end">
-            <div className="text-center">
-              <div className="number-luxury">4.9</div>
-              <div className="flex gap-0.5 justify-center my-2 text-[var(--accent)]">
-                {Array.from({ length: 5 }).map((_, i) => <Star key={i} className="w-3.5 h-3.5 fill-current" />)}
+          <div className="lg:col-span-7 grid grid-cols-3 gap-1 sm:gap-6 w-full mt-6 lg:mt-0">
+            <div className="text-center px-0.5">
+              <div className="number-stat">4.9</div>
+              <div className="flex gap-0.5 justify-center my-1.5 text-[var(--accent)]">
+                {Array.from({ length: 5 }).map((_, i) => <Star key={i} className="w-3 h-3 sm:w-3.5 sm:h-3.5 fill-current" />)}
               </div>
-              <p className={`text-xs ${isDark ? "text-white/55" : "text-[var(--muted)]"}`}>تقييم Google</p>
+              <p className={`text-[10px] sm:text-xs leading-tight ${isDark ? "text-white/55" : "text-[var(--muted)]"}`}>تقييم Google</p>
             </div>
-            <div className="text-center">
-              <div className="number-luxury">+5,000</div>
-              <p className={`text-xs mt-3 ${isDark ? "text-white/55" : "text-[var(--muted)]"}`}>لاعب نشط</p>
+            <div className="text-center px-0.5">
+              <div className="number-stat">+5K</div>
+              <p className={`text-[10px] sm:text-xs mt-2 leading-tight ${isDark ? "text-white/55" : "text-[var(--muted)]"}`}>لاعب نشط</p>
             </div>
-            <div className="text-center">
-              <div className="number-luxury">98%</div>
-              <p className={`text-xs mt-3 ${isDark ? "text-white/55" : "text-[var(--muted)]"}`}>نسبة العودة للحجز</p>
+            <div className="text-center px-0.5">
+              <div className="number-stat">98%</div>
+              <p className={`text-[10px] sm:text-xs mt-2 leading-tight ${isDark ? "text-white/55" : "text-[var(--muted)]"}`}>عودة للحجز</p>
             </div>
           </div>
         </div>

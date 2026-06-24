@@ -32,7 +32,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="ar" dir="rtl">
       <body className={`${tajawal.variable} ${ibm.variable}`}>
         <SiteHeader />
-        {children}
+        <div className="pb-mobile-bar">
+          {children}
+        </div>
         <SiteFooter />
         <WhatsAppFAB />
         <StickyBookingBar />

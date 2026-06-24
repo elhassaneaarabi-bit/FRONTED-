@@ -22,11 +22,11 @@ export default function AcademyPage() {
             <h1 className="display-1">أكاديمية تصنع <br /><span className="text-[var(--accent)]">لاعبين، لا متفرّجين.</span></h1>
             <p className="lead text-white/70 mt-6 max-w-2xl">٣ برامج مدروسة علمياً، تأخذك من ممسك المضرب لأول مرة إلى صفوف لاعبي البطولات.</p>
           </div>
-          <div className="lg:col-span-5 grid grid-cols-3 gap-2 sm:gap-4">
-            {[{v:"+12",l:"مدرب معتمد"},{v:"+800",l:"متدرّب سنوياً"},{v:"98%",l:"نسبة التطور"}].map((s) => (
-              <div key={s.l} className="card-night p-3 sm:p-5 text-center">
-                <div className="text-xl sm:text-3xl font-black text-[var(--accent)] tracking-tight">{s.v}</div>
-                <p className="text-xs text-white/55 mt-2">{s.l}</p>
+          <div className="lg:col-span-5 grid grid-cols-3 gap-1.5 sm:gap-4">
+            {[{v:"+12",l:"مدرب"},{v:"+800",l:"متدرّب"},{v:"98%",l:"تطور"}].map((s) => (
+              <div key={s.l} className="card-night p-2.5 sm:p-5 text-center">
+                <div className="text-lg sm:text-3xl font-black text-[var(--accent)]">{s.v}</div>
+                <p className="text-[10px] sm:text-xs text-white/55 mt-1.5 leading-tight">{s.l}</p>
               </div>
             ))}
           </div>
