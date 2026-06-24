@@ -15,6 +15,7 @@ export const siteConfig = {
   clubName: "بادل رَش",
   clubNameEn: "Padel Rush",
   logoText: "PADEL RUSH",
+  logoSrc: "/brand/logo.png",
   tagline: "DON'T MISS OUT ON AN EXPERIENCE",
   city: "الرياض",
   address: "Boulevard Riyadh City — حي حطين، الرياض 13516",

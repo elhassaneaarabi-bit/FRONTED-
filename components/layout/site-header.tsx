@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { Menu, MessageCircle, X } from "@/lib/icons";
 import { siteConfig } from "@/lib/site-config";
 import { whatsappUrl } from "@/lib/whatsapp";
+import { RushLogo } from "@/components/layout/rush-logo";
 
 const navLinks = [
   { href: "/courts", label: "الملاعب" },
@@ -14,21 +15,6 @@ const navLinks = [
   { href: "/tournaments", label: "البطولات" },
   { href: "/about", label: "النادي" }
 ];
-
-function RushLogo({ className = "" }: { className?: string }) {
-  return (
-    <div className={`flex items-center gap-2.5 ${className}`}>
-      <div className="relative w-11 h-11 rounded-xl bg-gradient-to-br from-[var(--ink)] via-[var(--ink-soft)] to-[var(--ink-deep)] flex items-center justify-center shadow-[0_10px_24px_-6px_rgba(15,17,21,0.55)] ring-1 ring-[var(--accent)]/40">
-        <span className="text-[var(--accent)] font-black text-xl tracking-tighter">R</span>
-        <span className="absolute -bottom-1 -left-1 w-3 h-3 rounded-full bg-[var(--accent)] ring-2 ring-[var(--ink)]"></span>
-      </div>
-      <div className="flex flex-col leading-none">
-        <span className="text-white font-black text-[15px] tracking-[0.04em]">PADEL <span className="text-[var(--accent)]">RUSH</span></span>
-        <span className="text-[var(--accent)]/70 text-[9px] tracking-[0.3em] uppercase font-bold mt-1">BLVD · Riyadh</span>
-      </div>
-    </div>
-  );
-}
 
 export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
